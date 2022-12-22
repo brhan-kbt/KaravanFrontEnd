@@ -1,0 +1,111 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Add Product</h1>
+       
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">New Product Form</h5>
+                   <form class="row g-3 " [formGroup]="addProductForm">
+
+                     <!-- <div class="row form-group">
+                        <div class="col-md-12">
+                           <input type="hidden" value="1" formControlName="quantity" class="form-control" id="quantity">
+                        </div>
+                     </div> -->
+                     <div class="row form-group">
+                        <div class="col-md-8">
+                           <label for="menuTitle" class="form-label">Product Name</label> 
+                           <input type="text" formControlName="menuTitle" class="form-control" id="menuTitle">
+                           <div *ngIf="addProductForm.controls['menuTitle'].dirty && addProductForm.hasError('required', 'menuTitle')" class="text-danger"> * Please, Enter Product Name.</div>
+                        </div>
+                        <div class="col-md-4">
+                           <label for="imagePath" class="form-label">Choose Image</label>
+                           <input type="file" formControlName="imagePath" name="image" class="form-control" id="imagePath">
+                           <div *ngIf="addProductForm.controls['imagePath'].dirty && addProductForm.hasError('required', 'imagePath')" class="text-danger"> * Please, Choose an Image.</div>
+                        </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-4">
+                           <label for="unitPrice" class="form-label">Product Unit Price</label> 
+                           <input type="text" formControlName="unitPrice" class="form-control" id="unitPrice">
+                           <div *ngIf="addProductForm.controls['unitPrice'].dirty && addProductForm.hasError('required', 'unitPrice')" class="text-danger"> * Please, Enter Unit Price.</div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                           <label for="category" class="form-label">Category</label>
+                           <select formControlName="category" id="category" class="form-select">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                           <div *ngIf="addProductForm.controls['category'].dirty && addProductForm.hasError('required', 'category')" class="text-danger"> * Please, Select Category.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="sub_category" class="form-label">Sub Category</label>
+                           <select formControlName="sub_category" id="sub_category" class="form-select">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                           <div *ngIf="addProductForm.controls['sub_category'].dirty && addProductForm.hasError('required', 'sub_category')" class="text-danger"> * Please, Select Sub Category.</div>
+                        </div>
+                       
+                     </div>
+
+                     <div class="row form-group">
+                       <div class="col-md-12">
+                        <label for="description" class="form-label">Some Description</label>
+                        <textarea class="form-control" formControlName="description" id="description" cols="30" rows="10"></textarea>
+                        <div *ngIf="addProductForm.controls['description'].dirty && addProductForm.hasError('required', 'description')" class="text-danger"> * Please, Enter Some Description.</div>
+                       </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-12">
+                         <label for="keyword" class="form-label">Tags</label>
+                         <input type="text" formControlName="keyword" id="keyword" class="form-control">
+                         <!-- <div *ngIf="addProductForm.controls['keyword'].dirty && addProductForm.hasError('required', 'keyword')" class="text-danger"> * Please, Enter Product Name.</div> -->
+                        </div>
+                      </div>
+
+                      <div class="row form-group">
+                        <div class="col-md-4">
+                         <label for="rating" class="form-label">Rating</label>
+                         <input type="number" formControlName="rating" class="form-control">
+                         <div *ngIf="addProductForm.controls['rating'].dirty && addProductForm.hasError('required', 'rating')" class="text-danger"> * Please, Enter rating.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="discount" class="form-label">Discount</label>
+                           <input type="number" formControlName="discount"  id="discount" class="form-control">
+                           <div *ngIf="addProductForm.controls['discount'].dirty && addProductForm.hasError('required', 'discount')" class="text-danger"> * Please, Enter Discount.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="productPoint" class="form-label">Product Points</label>
+                           <input type="number" formControlName="productPoint" id="productPoint" class="form-control">
+                           <div *ngIf="addProductForm.controls['productPoint'].dirty && addProductForm.hasError('required', 'productPoint')" class="text-danger"> * Please, Enter Product Point.</div>
+                        </div>
+                      </div>
+                      <div class="text-center"> 
+                        <button type="submit" (click)="onAddingMenu()" class="btn btn-primary">Submit</button> 
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>
+ <app-footer></app-footer>

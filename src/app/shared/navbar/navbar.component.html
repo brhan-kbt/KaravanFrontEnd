@@ -1,0 +1,27 @@
+<header id="custom_header" class="custom-header">
+    <div  class="logo">
+      <!-- <h2>Karavan Coffee</h2> -->
+      <img src="../../../../assets/assets/images/karavan-images/logo/logo-01.png" alt="">
+  </div>
+  
+    <div class="navigation">
+        <input type="checkbox" style="display: none;" id="nav-checkbox">
+        <label for="nav-checkbox" class="custom_nav_toggle" id="custom_nav_toggle">
+            <img style=" filter:   saturate(100) hue-rotate(241.5deg);" src="assets/open.png" alt="" class="open">
+            <img src="assets/close.png" alt="" class="close">
+        </label>
+        <ul class="nav-menu">
+            <li><a (click)="home()">Home</a> </li>
+            <li><a (click)="order()">Order</a> </li>
+            <li><a (click)="product()">Our Product</a> </li>
+            <li><a (click)="gallery()">Gallery</a> </li>
+            <li><a (click)="about()">About</a> </li>
+            <li><a  (click)="register()">Register</a> </li>
+            <li><a (click)="login()">Login</a> </li>
+            <li><a href="/cart" >
+              <img width="20px" height="20px" src="../../../../assets/assets/css/cart.png" alt=""> 
+              <span style="margin: 0px 10px;" >{{itemInCart}}</span>
+            </a></li>
+        </ul>
+    </div>
+</header>

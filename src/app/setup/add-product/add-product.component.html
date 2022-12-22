@@ -1,0 +1,117 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Add Product</h1>
+       
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">New Product Form</h5>
+                   <form class="row g-3 " [formGroup]="addProductForm">
+
+                     <div class="row form-group">
+                        <div class="col-md-12">
+                           <input type="hidden" value="1" formControlName="quantity" class="form-control" id="quantity">
+                        </div>
+                     </div>
+                     <div class="row form-group">
+                        <div class="col-md-8">
+                           <label for="productName" class="form-label">Product Name</label> 
+                           <input type="text" formControlName="productName" class="form-control" id="productName">
+                           <div *ngIf="addProductForm.controls['productName'].dirty && addProductForm.hasError('required', 'productName')" class="text-danger"> * Please, Enter Product Name.</div>
+                        </div>
+                        <div class="col-md-4">
+                           <label for="imagePath" class="form-label">Choose Image</label>
+                           <input type="file" formControlName="imagePath" name="image" class="form-control" id="imagePath">
+                           <div *ngIf="addProductForm.controls['imagePath'].dirty && addProductForm.hasError('required', 'imagePath')" class="text-danger"> * Please, Choose an Image.</div>
+                        </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-3">
+                           <label for="productCode" class="form-label">Product Code</label> 
+                           <input type="text" formControlName="productCode" class="form-control" id="productCode">
+                           <div *ngIf="addProductForm.controls['productCode'].dirty && addProductForm.hasError('required', 'productCode')" class="text-danger"> * Please, Enter Product Code.</div>
+                        </div>
+
+                        <div class="col-md-3">
+                           <label for="unitPrice" class="form-label">Product Unit Price</label> 
+                           <input type="text" formControlName="unitPrice" class="form-control" id="unitPrice">
+                           <div *ngIf="addProductForm.controls['unitPrice'].dirty && addProductForm.hasError('required', 'unitPrice')" class="text-danger"> * Please, Enter Unit Price.</div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                           <label for="productCategory" class="form-label">Category</label>
+                           <select formControlName="productCategory" id="productCategory" class="form-select">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                           <div *ngIf="addProductForm.controls['productCategory'].dirty && addProductForm.hasError('required', 'productCategory')" class="text-danger"> * Please, Select Category.</div>
+                        </div>
+
+                        <div class="col-md-3">
+                           <label for="productSubCategory" class="form-label">Sub Category</label>
+                           <select formControlName="productSubCategory" id="productSubCategory" class="form-select">
+                              <option selected>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                           <div *ngIf="addProductForm.controls['productSubCategory'].dirty && addProductForm.hasError('required', 'productSubCategory')" class="text-danger"> * Please, Select Sub Category.</div>
+                        </div>
+                       
+                     </div>
+
+                     <div class="row form-group">
+                       <div class="col-md-12">
+                        <label for="productDescription" class="form-label">Some Description</label>
+                        <textarea class="form-control" formControlName="productDescription" id="productDescription" cols="30" rows="10"></textarea>
+                        <div *ngIf="addProductForm.controls['productDescription'].dirty && addProductForm.hasError('required', 'productDescription')" class="text-danger"> * Please, Enter Some Description.</div>
+                       </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-12">
+                         <label for="mainIngredients" class="form-label">Tags</label>
+                         <input type="text" formControlName="mainIngredients" id="mainIngredients" class="form-control">
+                         <!-- <div *ngIf="addProductForm.controls['mainIngredients'].dirty && addProductForm.hasError('required', 'mainIngredients')" class="text-danger"> * Please, Enter Product Name.</div> -->
+                        </div>
+                      </div>
+
+                      <div class="row form-group">
+                        <div class="col-md-4">
+                         <label for="rating" class="form-label">Rating</label>
+                         <input type="number" max="5" formControlName="rating" class="form-control">
+                         <div *ngIf="addProductForm.controls['rating'].dirty && addProductForm.hasError('required', 'rating')" class="text-danger"> * Please, Enter rating.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="discount" class="form-label">Discount</label>
+                           <input type="number" formControlName="discount"  id="discount" class="form-control">
+                           <div *ngIf="addProductForm.controls['discount'].dirty && addProductForm.hasError('required', 'discount')" class="text-danger"> * Please, Enter Discount.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="productPoint" class="form-label">Product Points</label>
+                           <input type="number" formControlName="productPoint" id="productPoint" class="form-control">
+                           <div *ngIf="addProductForm.controls['productPoint'].dirty && addProductForm.hasError('required', 'productPoint')" class="text-danger"> * Please, Enter Product Point.</div>
+                        </div>
+                      </div>
+                      <div class="text-center"> 
+                        <button type="submit" (click)="onAddingProduct()" class="btn btn-primary">Submit</button> 
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>
+ <app-footer></app-footer>

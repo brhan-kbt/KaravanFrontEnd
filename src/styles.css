@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+#custom_checkbox,#nav-checkbox, #custom_nav_toggle{
+    display: none;
+   }
+   .custom-header{
+       position:fixed;
+       top:0;
+       left:0;
+       width:100%;
+       align-items: center;
+       display: flex;
+       justify-content: space-between;
+       padding: 20px 20px;
+       transition:background-color 0.5s ease;
+   }
+   /* .logo h2{
+       color: #fff;
+       text-transform: uppercase;
+       font-weight: normal;
+   } */
+   .logo img{
+    /* width:20%; */
+    height: 60px;
+   }
+   .nav-menu li{
+       display: inline-block;
+   }
+   .nav-menu li a{
+       color: #fff;
+       text-decoration: none;
+       font-size: 1.5rem;
+       padding: 0 15px;
+   
+   }
+   .nav-menu li a:hover{
+       color: orangered;
+   }
+   .scroll {
+       background-color:#612c2c;
+   }
+   @media (max-width:800px){
+       .custom-header{
+           display: block;
+       }
+       .logo{
+           margin-left: 15px;
+           display: none;
+       }
+       #custom_nav_toggle{
+           display: block;
+           position: absolute;
+           cursor: pointer;
+           top: 25px;
+           right: 0;
+           margin: 0 1rem;
+       }
+       .custom_nav_toggle img{
+           width: 25px;
+       }
+       .close,
+       input[type='checkbox']{
+           display: none;
+   
+       }
+       #nav-checkbox:checked ~ .nav-menu{
+           /* background: #cc0000; */
+           margin-top: 10px;
+           padding: 10px 0;
+           border-top: 1px solid #fff;
+       }
+   
+       .nav-menu li{
+           display: none;
+           margin: 10px 0;
+       }
+   
+       #nav-checkbox:checked ~ ul.nav-menu li{
+           display:  block;
+       }
+       #nav-checkbox:checked ~ label.custom_nav_toggle .open{
+           display:  none;
+       }
+       #nav-checkbox:checked ~ label.custom_nav_toggle .close{
+           display:  block;
+       }
+   
+       
+   
+   }
+   
