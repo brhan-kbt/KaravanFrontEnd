@@ -66,6 +66,10 @@ import { AddMenuComponent } from './setup/add-menu/add-menu.component'
 import { NgToastModule } from 'ng-angular-popup';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MenuComponent } from './setup/menu/menu.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+
+
 
 @NgModule({
   declarations: [
@@ -127,7 +131,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     DashboardNavbarComponent,
     LoginComponent,
     MenulistComponent,
-    AddMenuComponent
+    AddMenuComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -135,7 +140,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule,
     HttpClientModule,
     NgToastModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    IvyCarouselModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

@@ -11,13 +11,14 @@
             <img src="assets/close.png" alt="" class="close">
         </label>
         <ul class="nav-menu">
-            <li><a (click)="home()">Home</a> </li>
-            <li><a (click)="order()">Order</a> </li>
-            <li><a (click)="product()">Our Product</a> </li>
-            <li><a (click)="gallery()">Gallery</a> </li>
-            <li><a (click)="about()">About</a> </li>
-            <li><a  (click)="register()">Register</a> </li>
-            <li><a (click)="login()">Login</a> </li>
+            <li><a routerLink="/welcome" >Home</a> </li>
+            <li><a routerLink="/menu">Menu</a> </li>
+            <li><a routerLink="/whykaravan">Karavan Promises</a> </li>
+            <li><a routerLink="/gallery" >Gallery</a> </li>
+            <li><a routerLink="/about" >About</a> </li>
+            <li><a routerLink="/order" style="padding: 10px;  font-family: Lithos;">Order Now!</a> </li>
+            <li><a routerLink="/register" >Register</a> </li>
+            <li><a routerLink="/login" >Login</a> </li>
             <li><a href="/cart" >
               <img width="20px" height="20px" src="../../../../assets/assets/css/cart.png" alt=""> 
               <span style="margin: 0px 10px;" >{{itemInCart}}</span>

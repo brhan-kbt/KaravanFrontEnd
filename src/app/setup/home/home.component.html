@@ -1,6 +1,5 @@
  <app-navbar></app-navbar>
 
-    <div class="footer-parallax-container">
 
         <div  class="section-bg-video grunge-border">
             <div class="bg-overlay transparent-dark"></div>
@@ -9,77 +8,103 @@
                     <source src="assets/assets/images/video-1.mp4" type="video/mp4">
                 </video> -->
         
-                <video src="assets/assets/images/video-1.mp4" type="video/mp4" playsinline loop autoplay [muted]="true"></video>
+                <video src="assets/assets/images/video-1.mp4" type="video/mp4" playsinline loop autoplay [muted]="false"></video>
                 
             </div>
             <div style="margin-top:100px;" class="container content overlay-content white text-center" data-anima="fade-top" data-timeline="asc" data-time="1000">
                 
-                <h5 class="text-uppercase anima" style="font-weight: bold;"> ~ ~ Layers of Happiness! ~ ~</h5>
-                <h2 class="text-bold text-xl anima"> KARAVAN COFFEE</h2>
+                <h5 class="text-uppercase anima" style="font-weight: bold; font-family:Lithos !important;"> ~ ~ Layers of Happiness! ~ ~</h5>
+                <h2 class="text-bold text-xl anima" style="font-family:Lithos !important;"> KARAVAN COFFEE</h2>
                 <p  class="anima" style="font-weight: bold;">
                     We believe we are in the business of selling happiness in the form of food and drink. 
                     We source superior ingredients and craft beautifully layered products with 
                     the ultimate objective of making our customers happy. 
                 </p>
-                <a  routerLink="/welcome" class="btn btn-border btn-sm anima anima-fade-bottom">VIEW THE MENU</a>
+                <a  routerLink="/order" class="btn btn-border btn-sm">Order Now!</a>
                 
                 
             </div>
         </div>
     
     <!-- History Section -->
+
         <div class="section-bg-color">
-            <div class="container content">
+                <div class="container content">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="icon-box">
-                            <div class="icon-box-cell">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="icon-box-cell">
-                                <label class="text-m">Call now</label>
-                                <p class="text-s">+251-911-111-111</p>
-                            </div>
+                <div class="col-md-2">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-cool-guy text-xl"></i>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="icon-box">
-                            <div class="icon-box-cell">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="icon-box-cell">
-                                <label class="text-m">Contact us</label>
-                                <p class="text-s">info@pizzeria.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="icon-box">
-                            <div class="icon-box-cell">
-                                <i class="fa-solid fa-location-pin"></i>
-                            </div>
-                            <div class="icon-box-cell">
-                                <label class="text-m">Location</label>
-                                <p class="text-s">1 Central Park, New York</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="icon-box">
-                            <div class="icon-box-cell">
-                                <i class="fa-solid fa-calendar-days"></i>
-                            </div>
-                            <div class="icon-box-cell">
-                                <label class="text-m">Schedules</label>
-                                <p class="text-s">Mon-Sun 7pm-1am</p>
-                            </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="10"></label></b>
+                            <p class="text-s">Years Experience</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-2">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-leafs text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="50000"></label></b>
+                            <p class="text-s">Recipients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 text-right">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-coffee text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="10000"></label></b>
+                            <p class="text-s">Customers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-conference text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="250"></label></b>
+                            <p class="text-s">Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-engineering text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="110"></label></b>
+                            <p class="text-s">Team members</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-2 text-right">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-pizza-slice text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                            <b><label class="counter text-m" data-speed="20000" data-to="123568"></label></b>
+                            <p class="text-s">Pizzas</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
             </div>
         </div>
+
     
-        <div class="section-bg-image parallax-window" data-sub-height="0" data-bleed="0" data-natural-height="850" data-natural-width="1920" data-parallax="scroll" data-image-src="assets/assets/images/bg-8.jpg">
+    
+        <!-- next to bg-image  next to class : data-sub-height="0" data-bleed="0"-->
+        <div class="section-bg-image parallax-window " data-sub-height="0" data-bleed="0"  data-natural-height="1000" data-natural-width="1920" data-parallax="scroll" style="background-image: url(assets/assets/images/bg-8.jpg);">
             <div class="container content">
                 <div class="title-base">
                     <hr />
@@ -94,120 +119,118 @@
                         </p>
                         <!-- <img src="assets/assets/images/sign-2.png" alt="" /> -->
                         
-                        <div class="flexslider carousel" data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:false,directionNav:false" style="margin-top: 10px;">
-                            <ul class="slides">
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/coffee.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Coffee</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            
-                                            <p> Coffee loses its aroma shortly after it is grind. 
-                                                We never buy grind or powdered coffee. Our coffee is tailor-roasted, 
-                                                according to Karavan Coffee secret blend, and grind in-house every 
-                                                morning before brewing. </p>
-                                        </div>
+                        <carousel style="z-index: 1;" [cellsToShow]="2" [loop]="true" [height]="350"  [autoplay]="true" [autoplayInterval]="3000">
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima"   style="height:240px;" src="assets/assets/images/karavan-images/promise/coffee.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Coffee</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        
+                                        <p> Coffee loses its aroma shortly after it is grind. 
+                                            We never buy grind or powdered coffee. Our coffee is tailor-roasted, 
+                                            according to Karavan Coffee secret blend, and grind in-house every 
+                                            morning before brewing. </p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height:240px;"src="assets/assets/images/karavan-images/promise/burger.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Burger</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            <p>Our burgers are hand-made every day in the premises. 
-                                                We buy a combination of five different cuts of beef and 
-                                                grind it in-house according to our special recipe.
-                                                Freezing burgers creates structural damage to the meat,
-                                                which leads to loss of nutritional value 
-                                                and flavourful juices once the burger is cooked. </p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima" style="height:240px;" src="assets/assets/images/karavan-images/promise/burger.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Burger</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        <p>Our burgers are hand-made every day in the premises. 
+                                            We buy a combination of five different cuts of beef and 
+                                            grind it in-house according to our special recipe.
+                                            Freezing burgers creates structural damage to the meat,
+                                            which leads to loss of nutritional value 
+                                            and flavourful juices once the burger is cooked. </p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/gingertea.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Ginger Tea</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            <p>   Ginger is highly regarded for its stimulant and medicinal values. 
-                                                We squeeze our ginger in-house. We never use powdered ginger. 
-                                                Try our ginger tea. </p>
-                                        </div>
+                                </div>     
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/gingertea.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Ginger Tea</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        <p>   Ginger is highly regarded for its stimulant and medicinal values. 
+                                            We squeeze our ginger in-house. We never use powdered ginger. 
+                                            Try our ginger tea. </p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/cake.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Cake</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            <p>
-                                                We use superior ingredients on all our cakes, 
-                                                which we import ourselves from Europe. KERRY, 
-                                                our supplier from the United Kingdom is a leader in 
-                                                food and beverage ingredients market. Ask for our 2016 
-                                                'Cake for all Occasions' catalogue of our creative designs 
-                                                and unique styles for all occasions including wedding, birthday, 
-                                                graduation and more.
-                                            </p>
-                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/cake.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Cake</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        <p>
+                                            We use superior ingredients on all our cakes, 
+                                            which we import ourselves from Europe. KERRY, 
+                                            our supplier from the United Kingdom is a leader in 
+                                            food and beverage ingredients market. Ask for our 2016 
+                                            'Cake for all Occasions' catalogue of our creative designs 
+                                            and unique styles for all occasions including wedding, birthday, 
+                                            graduation and more.
+                                        </p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/habesha.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Ginger Tea</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            <p> 
-                                                The flavour of a Habesha dish is as good as the Berbere 
-                                                it is made from. Our Berbere is home made with 14 secret 
-                                                ingredients and unlike commercial blend, the chilli seed 
-                                                is fully excluded from the final mix for colour, taste and 
-                                                avoid unnecessary heat and discomfort to the stomach. 
-                                            </p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/habesha.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Ginger Tea</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        <p> 
+                                            The flavour of a Habesha dish is as good as the Berbere 
+                                            it is made from. Our Berbere is home made with 14 secret 
+                                            ingredients and unlike commercial blend, the chilli seed 
+                                            is fully excluded from the final mix for colour, taste and 
+                                            avoid unnecessary heat and discomfort to the stomach. 
+                                        </p>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
-                                        <a class="img-box">
-                                            <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/juice.jpg" alt="" />
-                                        </a>
-                                        <div class="content-box">
-                                            <h2>Our Cake</h2>
-                                            <h4> ~ Karavan Promise ~ </h4>
-                                            <hr class="e" />
-                                            <p>
-                                                Bulk squeezed fruit doesn't allow for sugar-free option. 
-                                                It also goes off quickly due to high water content added 
-                                                during bulk squeezing. Our Juice is freshly squeezed per 
-                                                order with sugar-free option. 
-                                            </p>
-                                        </div>
+                                </div>    
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="advs-box niche-box-team" data-anima="scale-up" data-trigger="hover">
+                                    <a class="img-box">
+                                        <img class="anima" style="height: 240px;"src="assets/assets/images/karavan-images/promise/juice.jpg" alt="" />
+                                    </a>
+                                    <div class="content-box">
+                                        <h2>Our Cake</h2>
+                                        <h4> ~ Karavan Promise ~ </h4>
+                                        <hr class="e" />
+                                        <p>
+                                            Bulk squeezed fruit doesn't allow for sugar-free option. 
+                                            It also goes off quickly due to high water content added 
+                                            during bulk squeezing. Our Juice is freshly squeezed per 
+                                            order with sugar-free option. 
+                                        </p>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-    
-    
+                                </div>
+                            </div>
+                          </carousel>
+                      
                     </div>
                 </div>
             </div>
@@ -215,7 +238,7 @@
     
     <!-- Menu Section -->
     
-        <div class="section-bg-image parallax-window text-center white" data-natural-height="850" data-natural-width="1920" data-parallax="scroll" data-image-src="../../../../assets/assets/images/bg-12.jpg">
+        <div class="section-bg-image parallax-window text-center white" data-natural-height="850" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-12.jpg);">
             <div class="container content">
                 
                 <div class="row">
@@ -236,7 +259,7 @@
             </div>
         </div>
 
-        <div class="section-bg-image" style="background-image:url(../../../../assets/assets/images/bg-retro.jpg)">
+        <div class="section-bg-image" style="background-image:url(assets/assets/images/bg-retro.jpg)">
             <div class="container content">
                 <div class="title-base">
                     <hr />
@@ -632,203 +655,41 @@
             </div>
         </div>
     
-        <!-- Testimonal Section -->
-        <!-- <div class="section-bg-image parallax-window gray" data-natural-height="850" data-natural-width="1920" data-parallax="scroll" data-image-src="../../../../assets/assets/images/bg-25.jpg">
-            <div class="container content">
-                <div class="title-base">
-                    <hr />
-                    <h2>Client's feedback</h2>
-                    <p>What our clients think about us</p>
-                </div>
-                <div class="flexslider carousel gray outer-navs" data-options="minWidth:200,itemMargin:30,numItems:3,controlNav:false,directionNav:false">
-                    <ul class="slides">
-                        <li>
-                            <div class="advs-box advs-box-top-icon niche-box-testimonails">
-                                <i class="fa text-xl circle onlycover" style="background-image:url('../../../../assets/assets/images/users/user-1.jpg')"></i>
-                                <p>
-                                    Lorem ipsum dolor sitamet consectetur adipisicing elito sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam qrem aperiam.
-                                </p>
-                                <h5>Alfred Merlon - Italy</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="advs-box advs-box-top-icon niche-box-testimonails">
-                                <i class="fa text-xl circle onlycover" style="background-image:url('../../../../assets/assets/images/users/user-2.jpg')"></i>
-                                <p>
-                                    Lorem ipsum dolor sitamet consectetur adipisicing elito sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam qrem aperiam.
-                                </p>
-                                <h5>Mary Groot - Greece</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="advs-box advs-box-top-icon niche-box-testimonails">
-                                <i class="fa text-xl circle onlycover" style="background-image:url('../../../../assets/assets/images/users/user-3.jpg')"></i>
-                                <p>
-                                    Lorem ipsum dolor sitamet consectetur adipisicing elito sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam qrem aperiam.
-                                </p>
-                                <h5>Jessy Mallo - United States</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="advs-box advs-box-top-icon niche-box-testimonails">
-                                <i class="fa text-xl circle onlycover" style="background-image:url('../../../../assets/assets/images/users/user-4.jpg')"></i>
-                                <p>
-                                    Lorem ipsum dolor sitamet consectetur adipisicing elito sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam qrem aperiam.
-                                </p>
-                                <h5>Jack Dannio - Russian Federiation</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-        
-        
-            
-            </div>
-        </div> -->
     
         <!-- Gallery Section -->
     
-        <div class="section-empty no-paddings">
-            <div class="content">
-                <div class="grid-list gallery">
-                    <div class="grid-box no-margins row" data-lightbox-anima="fade-top">
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/foods/image-1.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/foods/image-1.jpg" alt="">
-                            </a>
+        <div class="section-bg-image parallax-window text-center white" data-natural-height="650" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-12.jpg);">
+                <div class="row">
+                    <div  style="margin-bottom: 30px;"  id="galleryBody">
+                        <div class="title-base" style="margin-top: 30px;">
+                            <hr />
+                            <h2>Karavan Gallery</h2>
+                            <p>Come and Enjoy!</p>
                         </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" alt="">
-                            </a>
+                        <div class="content">
+                            <div class="grid-list">
+                                <div class="grid-box">
+        
+                                    <carousel style="z-index: 1;"  [cellsToShow]="5" [loop]="true"  [autoplay]="true" [autoplayInterval]="1500">
+                                        <ng-container  *ngFor="let g of galleries">
+                                            <div  class="carousel-cell">
+                                                <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                                                    <img  [src]="g.imagePath" alt="" />
+                                                </a>
+                                            </div>
+                                        </ng-container>
+                                        
+                                    </carousel>
+                                </div>
+                            </div>
                         </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/drinks/image-10.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/drinks/image-10.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/cakes/image-100.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/cakes/image-100.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/pizzas/image-4.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/pizzas/image-4.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/drinks/image-6.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/drinks/image-6.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/cakes/image-103.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/cakes/image-103.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/foods/image-14.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/foods/image-14.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/pizzas/image-83.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/pizzas/image-83.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/cakes/image-116.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/cakes/image-116.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/drinks/image-9.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/drinks/image-9.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item col-md-2">
-                            <a class="img-box i-center" href="../../../../assets/assets/images/karavan-images/pizzas/image-84.jpg" data-anima="show-scale" data-trigger="hover" data-anima-out="hide">
-                                <i class="fa-solid fa-camera anima"></i>
-                                <img style="width:220px; height: 200px; background-size: contain ; gap:no-gap;" src="../../../../assets/assets/images/karavan-images/pizzas/image-84.jpg" alt="">
-                            </a>
-                        </div>
+                        <a routerLink="/gallery" class="btn-border circle-button btn btn-sm">Full list</a>
                     </div>
-                </div>
             </div>
         </div>
     
         <!-- Contact Section -->
-    
-        <div class="section-empty">
-            <div class="container content">
-                <div class="row">
-                    <div class="col-md-1 text-center-sm">
-                        <img src="../../../../assets/assets/images/clock.gif" alt="" />
-                    </div>
-                    <div class="col-md-2 col-sm-12 text-center-sm">
-                        <div class="title-base text-left text-center-sm">
-                            <hr />
-                            <h2>Hours</h2>
-                            <p>Our open schedules</p>
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-sm-12 text-center-sm">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Day</th>
-                                    <th>Monday</th>
-                                    <th>Tuesday</th>
-                                    <th>Wednesday</th>
-                                    <th>Thurdsay</th>
-                                    <th>Friday</th>
-                                    <th>Saturday</th>
-                                    <th>Sunday</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>Lunch</th>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                    <td>11am - 15pm</td>
-                                </tr>
-                                <tr>
-                                    <th>Dinner</th>
-                                    <td>Closed</td>
-                                    <td>18pm - 23pm</td>
-                                    <td>18pm - 23pm</td>
-                                    <td>18pm - 23pm</td>
-                                    <td>18pm - 23pm</td>
-                                    <td>18pm - 23pm</td>
-                                    <td>18pm - 23pm</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
         <div class="section-bg-image text-center" style="background-image: url(../../../../assets/assets/images/bg-13.jpg)">
             <div class="container content">
@@ -869,14 +730,11 @@
                                 <div class="col-md-12">
                                     <p>Messagge</p>
                                     <textarea id="messagge" name="messagge" class="form-control form-value" placeholder="Type your message ..." required></textarea>
-                                    <button class="anima-button circle-button btn-sm btn" type="submit"><i class="fa fa-envelope"></i>Send message</button>
+                                    <button class="anima-button circle-button btn-sm btn mt-5" type="submit">
+                                        <i class="fa fa-envelope ml-4"></i>
+                                        Send message
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="success-box">
-                                <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
-                            </div>
-                            <div class="error-box">
-                                <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
                             </div>
                         </form>
                     </div>
@@ -885,7 +743,7 @@
             </div>
         </div>
     
-        <footer class="footer-base footer-parallax">
+        <footer>
             <div class="content">
                 <div class="container">
                     <div class="row">
@@ -914,5 +772,4 @@
             </div>
         </footer>
         
-    </div>
     

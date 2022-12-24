@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Gallery, Gallery2 } from 'src/app/models/gallery';
+import { GalleryService } from 'src/app/services/gallery/gallery.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  galleries:Gallery[]=[];
+  
+  constructor( private gallery:GalleryService) {
+          gallery.getGalleries().subscribe((res)=>{
+          this.galleries=res
+   })
+   }  
+ 
   ngOnInit(): void {
   }
+
+
 
 }

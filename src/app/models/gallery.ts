@@ -5,3 +5,6 @@ export interface Gallery {
     imagePath:string;
     description:string;
 }
+export interface Gallery2{
+    path:string;
+}

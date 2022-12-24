@@ -53,6 +53,7 @@ import { LoginComponent } from './setup/login/login.component';
 import { MenulistComponent } from './setup/menulist/menulist.component';
 import { AddMenuComponent } from './setup/add-menu/add-menu.component';
 import { AuthGuard } from './guards/auth/auth.guard';
+import { MenuComponent } from './setup/menu/menu.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -69,6 +70,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   { path: 'menu-mgt', component: MenulistComponent },
   { path: 'add-menu', component: AddMenuComponent },
+  { path: 'menu', component: MenuComponent },
   { path: 'user-mgt', component: UserlistComponent },
   { path: 'add-user', component: AdduserComponent },
   { path: 'order-mgt', component: OrderlistComponent },
