@@ -6,6 +6,9 @@
 	src: url(assets/fonts/karavan_font/LithosPro-Regular.otf);
 }
 
+h1, h2, h3{
+    font-family: Lithos !important;
+}
 
 #custom_checkbox,#nav-checkbox, #custom_nav_toggle{
     display: none;

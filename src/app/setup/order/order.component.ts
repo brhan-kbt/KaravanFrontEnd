@@ -17,6 +17,7 @@ export class OrderComponent implements OnInit {
   productList: Product[]=[];
   addForm !:Product;
   pages:number =1;
+  productCat:string='';
   
 
   constructor(
@@ -48,7 +49,7 @@ export class OrderComponent implements OnInit {
   filter(category:string){
     this.filteredProducts = this.productList
     .filter((a:any)=>{
-      if(a.category == category || category==''){
+      if(a.productSubCategory == category || a.productCategory==category){
         return a;
       }
     })
@@ -84,5 +85,15 @@ export class OrderComponent implements OnInit {
       window.location.reload();
     });
 
+  }
+  
+  filtercat(category:string){
+    this.filteredProducts = this.productList
+    .filter((a:any)=>{
+      if(a.productCategory == category || category==''){
+        this.productCat = category;
+        return a;
+      }
+    })
   }
 }

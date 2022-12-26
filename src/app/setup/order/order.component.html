@@ -15,33 +15,25 @@
                     <div class="row">
                         <div  class="col-md-3">
                             <div class="advs-box advs-box-top-icon-img" >
-                                <a class="img-box" href="#">
+                                <a class="img-box" (click)="filtercat('Cakes')">
                                     <span><img  src="../../../../assets/assets/images/karavan-images/cakes/image-88.jpg" alt=""></span>
                                 </a>
                                 <div class="advs-box-content">
-                                    <h3><a href="#">Baconnaise Angus</a></h3>
                                     <span class="extra-content">Cakes</span>
-                                    <p>
-                                        Interdum iusto pulvinar consequuntur augue optio faguroso otto.
-                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="advs-box advs-box-top-icon-img">
-                                <a class="img-box" href="#">
+                                <a class="img-box" (click)="filtercat('Fast Food')">
                                     <span><img  src="../../../../assets/assets/images/karavan-images/foods/image-25.jpg" alt=""></span>
                                 </a>
                                 <div class="advs-box-content">
-                                    <h3><a href="#">Chicken Wrap</a></h3>
                                     <span class="extra-content">Fast Food</span>
-                                    <p>
-                                        Interdum iusto pulvinar consequuntur augue optio repellate molto.
-                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <!-- <div class="col-md-3">
                             <div class="advs-box advs-box-top-icon-img">
                                 <a class="img-box" href="#">
                                     <span><img  src="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" alt=""></span>
@@ -68,7 +60,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -83,6 +75,7 @@
               <div class="page-content-wrapper">
                 <div class="page-content no-padding">
                   
+                <ng-container *ngIf="productCat=='Fast Food'">
                   <section class="service-section-02 padding-top-100">
                     <div class="container">
                       <div class="swin-sc swin-sc-iconbox">
@@ -90,36 +83,81 @@
                           <div class="card-top container-fluid">
                             <div class="container d-flex">
                                 <div class="custom_item">
-                                    <a (click)="filter('')">                                  
-                                        <img src="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" alt="">
-                                        <h6>All products</h6>
-                                    </a>
-                                </div>
-                                <div class="custom_item">
-                                    <a (click)="filter('cakes')">
-                                        <img src="../../../../assets/assets/images/karavan-images/cakes/image-88.jpg" alt="">
-                                        <h6>Cakes</h6>
-                                    </a>
-                                </div>
-                                <div class="custom_item">
-                                    <a (click)="filter('food')">
-                                        <img src="../../../../assets/assets/images/karavan-images/foods/image-1.jpg" alt="">
-                                        <h6>Fast Food</h6>
-                                    </a>
-                                </div>
-                                <div class="custom_item">
-                                    <a (click)="filter('drinks')">
-                                        <img style="width: 62px; margin-top: 5px;" src="../../../../assets/assets/images/karavan-images/drinks/image-6.jpg" alt="">
-                                        <h6>Drinks</h6>
-                                    </a>
-                                </div>
+                                  <a (click)="filter('')">                                  
+                                      <img src="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" alt="">
+                                      <h6>All products</h6>
+                                  </a>
+                              </div>
+                              <div class="custom_item">
+                                  <a (click)="filter('cakes')">
+                                      <img src="../../../../assets/assets/images/karavan-images/cakes/image-88.jpg" alt="">
+                                      <h6>Cakes</h6>
+                                  </a>
+                              </div>
+                              <div class="custom_item">
+                                  <a (click)="filter('food')">
+                                      <img src="../../../../assets/assets/images/karavan-images/foods/image-1.jpg" alt="">
+                                      <h6>Fast Food</h6>
+                                  </a>
+                              </div>
+                              <div class="custom_item">
+                                  <a (click)="filter('drinks')">
+                                      <img style="width: 62px; margin-top: 5px;" src="../../../../assets/assets/images/karavan-images/drinks/image-6.jpg" alt="">
+                                      <h6>Drinks</h6>
+                                  </a>
+                              </div>
+
+                             
+                              
                             </div>
                         </div>
                         </div>
                       </div>
                     </div>
                   </section>
-                  
+                </ng-container>
+                
+                <ng-container *ngIf="productCat=='Cakes'">
+                  <section class="service-section-02 padding-top-100">
+                    <div class="container">
+                      <div class="swin-sc swin-sc-iconbox">
+                        <div class="row d-flex">
+                          <div class="card-top container-fluid">
+                            <div class="container d-flex">
+                              <div class="custom_item">
+                                <a (click)="filter('Cakes')">                                  
+                                    <img src="../../../../assets/assets/images/karavan-images/pizzas/image-3.jpg" alt="">
+                                    <h6>All products</h6>
+                                </a>
+                            </div>
+                            <div class="custom_item">
+                                <a (click)="filter('Torta')">
+                                    <img src="../../../../assets/assets/images/karavan-images/cakes/image-88.jpg" alt="">
+                                    <h6>Torta</h6>
+                                </a>
+                            </div>
+                            <div class="custom_item">
+                                <a (click)="filter('Black Forest')">
+                                    <img src="../../../../assets/assets/images/karavan-images/foods/image-1.jpg" alt="">
+                                    <h6>Black Forest</h6>
+                                </a>
+                            </div>
+                            <div class="custom_item">
+                                <a (click)="filter('4KG')">
+                                    <img style="width: 62px; margin-top: 5px;" src="../../../../assets/assets/images/karavan-images/drinks/image-6.jpg" alt="">
+                                    <h6>4KG</h6>
+                                </a>
+                            </div>                           
+                              
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                </ng-container>
+
                   <section class="padding-top-120 padding-bottom-100">
                     <div class="container">
                       <div class="swin-sc swin-sc-title">
@@ -135,12 +173,13 @@
                                 <div class="block-img">
                                   <img style="height: 250px;" [src]="product.imagePath" alt="" class="img img-responsive">
                                   <div class="block-circle price-wrapper"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>{{product.unitPrice}}</span></div>
-                                  <div class="group-btn"><a href="/p" class="swin-btn btn-link">
-                                    <i class="icons fa fa-link"></i>
-                                  </a>
-                                  <a (click)="orderdetails(product.productCode)"style="margin: 10px;" class="swin-btn btn-add-to-card">
-                                    <img width="50px" height="30px" src="../../../../assets/assets/css/cart.png" alt="">
-                                  </a>
+                                  <div class="group-btn">
+                                    <a  (click)="orderdetails(product.productCode)" class="swin-btn btn-link">
+                                      <i class="icons fa fa-link"></i>
+                                    </a>
+                                    <a (click)="orderdetails(product.productCode)" class="swin-btn btn-add-to-card">
+                                      <i class="fa fa-shopping-basket"></i>
+                                    </a>
                                 </div>
                                 </div>
                                 <div class="block-content">
@@ -206,7 +245,12 @@
                               <div class="blog-item item swin-transition">
                                 <div class="block-img"><img [src]="product.imageUrl" alt="" class="img img-responsive">
                                   <div class="block-circle price-wrapper"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>{{product.price}}</span></div>
-                                  <div class="group-btn"><a href="/p" class="swin-btn btn-link"><i class="icons fa fa-link"></i></a><a (click)="orderdetails(product.productCode)" class="swin-btn btn-add-to-card"><i class="fa fa-shopping-basket"></i></a></div>
+                                  <div class="group-btn">
+                                    <a href="/p" class="swin-btn btn-link">
+                                    <i class="icons fa fa-link"></i>
+                                  </a>
+                                   <a (click)="orderdetails(product.productCode)" class="swin-btn btn-add-to-card">
+                                    <i class="fa fa-shopping-basket"></i></a></div>
                                 </div>
                                 <div class="block-content">
                                   <h5 class="title"><a (click)="orderdetails(product.productCode)">{{product.title}}</a></h5>
