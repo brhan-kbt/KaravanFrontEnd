@@ -2745,8 +2745,9 @@ footer {
 
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
-  position: absolute;
-  left: -9999px; }
+  /* position: absolute;
+  left: -9999px; */
+}
 
 [type="checkbox"]:checked + label,
 [type="checkbox"]:not(:checked) + label {

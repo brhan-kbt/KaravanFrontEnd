@@ -1,0 +1,8 @@
+.custom-radio:checked + label{
+ width:400px;
+ color: #D6B13E;
+}
+.form-check-label{
+    font-family: Lithos;
+    font-size: 15px;
+}

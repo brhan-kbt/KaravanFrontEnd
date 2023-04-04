@@ -1,0 +1,78 @@
+
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<main id="main" class="main">
+    <section class="section dashboard">
+       
+       <div class="row">
+         <div class="col-lg-12">
+            <div class="row">
+               <div class="col-12">
+                  <div class="card recent-sales overflow-auto">
+                     <div class="filter">
+                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                           <li class="dropdown-header text-start">
+                              <h6>Filter</h6>
+                           </li>
+                           <li><a class="dropdown-item" href="#">Today</a></li>
+                           <li><a class="dropdown-item" href="#">This Month</a></li>
+                           <li><a class="dropdown-item" href="#">This Year</a></li>
+                        </ul>
+                     </div>
+                     <div class="card-body">
+                           <h5 class="card-title">Sub Categories <span>| Karavan Restaurant</span></h5>
+                           <a  style="
+                           border: 1px solid orange;
+                           margin-top: 20px;
+                           margin-bottom: 20px;
+                           padding: 10px;
+                           display: block;
+                           width: 200px;
+                           background-color: darkorange;
+                           border-radius: 5px;
+                           color: white;" routerLink="/add-subcategory"> <i class="bi bi-plus"></i> <span>Add Sub Category</span> </a>
+                        
+                        <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger2">
+                           <thead>
+                              <tr>
+                                 <th scope="col">#</th>
+                                 <th scope="col">Image</th>
+                                 <th scope="col">Parent Name</th>
+                                 <th scope="col">SubCategory Name</th>
+                                 <th scope="col">SubCategory Description</th>
+                                 <th scope="col">Actions</th>
+
+                              </tr>
+                           </thead>
+                          <tbody>
+                             <ng-container *ngFor="let category of subcategories; let i=index">
+                                <tr *ngIf="category.categoryId==id">
+
+                                   <th>{{i+1}}</th>
+                                   <td>
+                                       <img height="50px" [src]="category.imagePath" alt="">
+                                   </td>
+                                   <td>{{acategory.categoryName}}</td>
+                                   <td>{{category.subCategoryName}}</td>
+                                   <td>{{category.subCategoryDescription}}</td>
+                                   <td>
+                                      <a routerLink="/edit-subcategory/{{category.subCategoryId}}" class="text-success mx-2"><i class="fa fa-edit"></i></a>
+                                      <a routerLink="" class="text-danger mx-2"><i class="fa fa-trash"></i></a> 
+                                     
+                                    </td>
+                                </tr>
+                             </ng-container>
+                          </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

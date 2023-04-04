@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-md-4">
                            <label for="imagePath" class="form-label">Choose Image</label>
-                           <input type="file" formControlName="imagePath" name="image" class="form-control" id="imagePath">
+                           <input type="file" formControlName="imagePath" name="image" class="form-control" (change)="onFileSelect($event)"id="imagePath">
                            <div *ngIf="addProductForm.controls['imagePath'].dirty && addProductForm.hasError('required', 'imagePath')" class="text-danger"> * Please, Choose an Image.</div>
                         </div>
                      </div>
@@ -46,25 +46,29 @@
                         
                         <div class="col-md-3">
                            <label for="productCategory" class="form-label">Category</label>
-                           <select formControlName="productCategory" id="productCategory" class="form-select">
-                              <option selected>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
+                           <select (change)="getcompanyid($event)" formControlName="productCategory" id="productCategory" class="form-select">
+                              <ng-container *ngFor="let cat of Category">
+                                 <option value="{{cat.categoryId}}" >{{cat.categoryName}}</option>
+                              </ng-container>
                             </select>
                            <div *ngIf="addProductForm.controls['productCategory'].dirty && addProductForm.hasError('required', 'productCategory')" class="text-danger"> * Please, Select Category.</div>
                         </div>
 
-                        <div class="col-md-3">
-                           <label for="productSubCategory" class="form-label">Sub Category</label>
-                           <select formControlName="productSubCategory" id="productSubCategory" class="form-select">
-                              <option selected>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
-                           <div *ngIf="addProductForm.controls['productSubCategory'].dirty && addProductForm.hasError('required', 'productSubCategory')" class="text-danger"> * Please, Select Sub Category.</div>
-                        </div>
+                           <div class="col-md-3">
+                              <label for="productSubCategory" class="form-label">Sub Category</label>
+                              <select formControlName="productSubCategory" id="productSubCategory" class="form-select" >
+                                 <!-- <ng-container *ngIf="filteredSubCategory.length<=0">
+                                    <option selected></option>
+                                    <option>Select Category First</option>
+                                 </ng-container> -->
+                                 <ng-container *ngFor="let cat of filteredSubCategory">
+                                    <option value="{{cat.categoryId}}">{{cat.subCategoryName}}</option>
+                                 </ng-container>
+                                
+                               </select>
+                              <div *ngIf="addProductForm.controls['productSubCategory'].dirty && addProductForm.hasError('required', 'productSubCategory')" class="text-danger"> * Please, Select Sub Category.</div>
+                           </div>
+                        
                        
                      </div>
 

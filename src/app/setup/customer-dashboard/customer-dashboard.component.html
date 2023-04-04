@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+
+
+    <div id="pagewrap" class="pagewrap " style="background: white !important;margin-top: 50px;">
+                
+            <div class="page-content-wrapper " style="background: white;">
+              <div class=" card" style="margin-top: 50px !important;padding: 50px;">
+                <div class="card-title" style="color:#004332; font-weight: bold; font-size: 30px;">
+                  My Orders
+              </div>
+              <div class="title-base" style="transform: translateY(-100%);">
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 1px;">
+                </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+            </div>
+                    
+                        <div class="container">
+                          <ng-container *ngIf="orders.length<1">
+                            <div class="card">
+                              <div class="row flex justify-content-center align-items-center"  style="padding: 50px;">
+                                <div class="col-md-6">
+                                  <h6 class="h3 text-danger">YOU HAVE NO ORDER!</h6>
+                                  <a routerLink="/order"  class="swin-btn checkout-submit float-start"><span>Shop Now! </span></a>
+                                </div>
+                                <div class="col-md-6">
+                                  <img style="height:20rem" src="assets/assets/images/karavan-images/bg/shop.png" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </ng-container>
+                        </div>
+
+                        <ng-container *ngIf="orders.length>=1">
+                          <div class="card-body">
+                                <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+                                  <thead>
+                                     <tr>
+                                        <th>#</th>
+                                        <th>Order Code</th>
+                                        <th>Order Date</th>
+                                        <th>Pick Up Date</th>
+                                        <th>Branch</th>
+                                        <th>Order Type</th>
+                                        <th>Total Price</th>
+                                        <th>Payment Mode</th>
+                                        <th>Status</th>
+                                        <th>Details</th>
+                                     </tr>
+                                  </thead>
+                                <tbody>
+                                 <ng-container *ngFor="let order of orders; let i=index">
+                                    <tr>
+                                       <th> {{i + 1}} </th>
+                                       <td>{{order.orderCode}}</td>
+                                       <td>{{order.orderDateTime | date:'MMMM d, yyyy HH:mm'}}</td>
+                                       <td>{{order.pickupDateTime  | date:'MMMM d, yyyy HH:mm'}}</td>
+                                       <td>{{order.branch.branchName}}</td>
+                                       <td>{{order.orderType}}</td>
+                                       <td>{{order.totalPrice}}</td>
+                                       <td>{{order.paymentMode}}</td>
+                                       <td class="text-success font-bold">{{order.orderStatus}}</td>
+                                       <td>
+                                        <a routerLink="order-detail/{{order.id}}" type="button" style="background-color: #004322; color: white; padding: 3px 8px; border-radius: 5px;" class="mx-2">Details</a>
+                                       </td>
+                                     
+                                    </tr>
+                                 </ng-container>
+                                </tbody>
+                               </table>
+                          </div>
+                      </ng-container>
+  
+                </div>
+               
+             
+            </div>
+          </div>
+       
+    
+    
+    <app-public-footer></app-public-footer>

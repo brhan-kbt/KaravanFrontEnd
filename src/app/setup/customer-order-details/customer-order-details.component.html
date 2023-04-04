@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+
+    <div id="pagewrap" class="pagewrap " style="background: white !important;margin-top: 50px;">
+                
+            <div class="page-content-wrapper " style="background: white;">
+              <div class=" card" style="margin-top: 50px !important;padding: 50px;">
+                <div class="card-title" style="color:#004332; font-weight: bold; font-size: 30px;">
+                  Order Detail Page
+              </div>
+              <div class="title-base" style="transform: translateY(-100%);">
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 1px;">
+                </div>
+                  <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                  </div>
+            </div>
+
+                        <div class="card-body">
+                            
+                              <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+                                <thead>
+                                   <tr>
+                                      <th>#</th>
+                                      <th>Product Name</th>
+                                      <th>Quantity</th>
+                                      <th>Unit Price</th>
+                                      <th>Total Price</th>
+                                      
+                                   </tr>
+                                </thead>
+                              <tbody>
+                               <ng-container *ngFor="let order of orderdetail; let i=index">
+                                  <tr>
+                                     <th> {{i + 1}} </th>
+                                     <td>{{order.product.productName}}</td>
+                                     <td>{{order.quantity}}</td>
+                                     <td>{{order.product.unitPrice}}</td>
+                                     <td>{{order.product.unitPrice * order.quantity}}</td>
+                                  </tr>
+                               </ng-container>
+                              </tbody>
+                             </table>
+                        </div>
+                </div>
+               
+             
+            </div>
+          </div>
+       
+    
+    
+    <app-public-footer></app-public-footer>

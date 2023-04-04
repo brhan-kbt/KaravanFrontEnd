@@ -1,91 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
-#custom_checkbox,#nav-checkbox, #custom_nav_toggle{
-    display: none;
-   }
-   .custom-header{
-       position:fixed;
-       top:0;
-       left:0;
-       width:100%;
-       align-items: center;
-       display: flex;
-       justify-content: space-between;
-       padding: 20px 20px;
-       transition:background-color 0.5s ease;
-   }
-   /* .logo h2{
-       color: #fff;
-       text-transform: uppercase;
-       font-weight: normal;
-   } */
-   .logo img{
-    /* width:20%; */
-    height: 60px;
-   }
-   .nav-menu li{
-       display: inline-block;
-   }
-   .nav-menu li a{
-       color: #fff;
-       text-decoration: none;
-       font-size: 1.5rem;
-       padding: 0 10px;
-   
-   }
+.floatMenu{
+    display: flex;
+    right: 5px ;
+    padding: 5px;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+}
+.floatParent{
+    background: #D6B13E;
+    border-top: 2px solid #004332;
+    border-bottom: 2px solid #004332;
+    border-left: 2px solid #004332;
+    border-right: 2px solid #004332;
+    border-radius: 0px 0px 10px 10px ;
+}
+.profile {
+    position: relative;
+    display: inline-block;
+  }
   
-   .nav-menu li a:hover{
-       color: orangered;
-   }
-   .scroll {
-       background-color:#612c2c;
-   }
-   @media (max-width:800px){
-       .custom-header{
-           display: block;
-       }
-       .logo{
-           margin-left: 15px;
-           display: none;
-       }
-       #custom_nav_toggle{
-           display: block;
-           position: absolute;
-           cursor: pointer;
-           top: 25px;
-           right: 0;
-           margin: 0 1rem;
-       }
-       .custom_nav_toggle img{
-           width: 25px;
-       }
-       .close,
-       input[type='checkbox']{
-           display: none;
-   
-       }
-       #nav-checkbox:checked ~ .nav-menu{
-           /* background: #cc0000; */
-           margin-top: 10px;
-           padding: 10px 0;
-           border-top: 1px solid #fff;
-       }
-   
-       .nav-menu li{
-           display: none;
-           margin: 10px 0;
-       }
-   
-       #nav-checkbox:checked ~ ul.nav-menu li{
-           display:  block;
-       }
-       #nav-checkbox:checked ~ label.custom_nav_toggle .open{
-           display:  none;
-       }
-       #nav-checkbox:checked ~ label.custom_nav_toggle .close{
-           display:  block;
-       }
-   
-       
-   
-   }
-   
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #D6B13E;
+    /* margin-right: 10px; */
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100px;
+    transform: translateX(-50%);
+    display: none;
+    padding: 5px 0;
+    background-color: #f2f2f2;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .profile:hover .profile-dropdown {
+    display: block;
+  }
+  
+  .profile-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-dropdown li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-dropdown li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .profile-dropdown li a:hover {
+    background-color: #ddd;
+  }
+  

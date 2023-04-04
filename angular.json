@@ -34,7 +34,11 @@
               "src/assets/assets/scripts/magnific-popup.css",
               "src/assets/assets/scripts/social.stream.css",
               "src/assets/assets/skin.css",
-              "src/assets/assets/css/font-awesome/css/font-awesome.min.css"
+              "src/assets/assets/css/font-awesome/css/font-awesome.min.css",
+              "src/assets/css/simple-datatables.css" ,
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "./node_modules/aos/dist/aos.css"
+
             ],
             "scripts": [
               "src/assets/assets/scripts/jquery.min.js",
@@ -51,7 +55,17 @@
               "src/assets/assets/scripts/jquery.magnific-popup.min.js",
               "src/assets/assets/scripts/social.stream.min.js",
               "src/assets/assets/scripts/jquery.slimscroll.min.js",
-              "src/assets/assets/scripts/smooth.scroll.min.js"
+              "src/assets/assets/scripts/smooth.scroll.min.js",
+              "src/assets/js/simple-datatables.js",
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "node_modules/jszip/dist/jszip.js",
+              "./node_modules/aos/dist/aos.js",
+              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+              "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+              "node_modules/datatables.net-buttons/js/buttons.flash.js",
+              "node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "node_modules/datatables.net-buttons/js/buttons.print.js"
             ]
           },
           "configurations": {

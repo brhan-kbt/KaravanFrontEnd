@@ -1,110 +1,144 @@
- <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
+ 
+    
+     <!-- <carousel style="z-index: 1;" [cellsToShow]="1" [height]="500" [loop]="true" [autoplay]="true" [autoplayInterval]="2000">
+ 
+        <div class="carousel-cell bg-overlay transparent-dark align-items-center" >
+            <img class="d-block"   src="assets/assets/images/karavan-images/promises/welcome.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #004332 !important;">Karavan Cake</h5>
+                        <p style="color: #004332 !important;">We use superior ingredients on all our cakes, 
+                            which we import ourselves from Europe. KERRY, 
+                            our supplier from the United Kingdom is a leader in 
+                            food and beverage ingredients market. Ask for our 2016 
+                            'Cake for all Occasions' catalogue of our creative designs 
+                            and unique styles for all occasions including wedding, birthday, 
+                            graduation and more.</p>
+            </div>
+        </div>
+        <div class="carousel-cell bg-overlay transparent-dark   align-items-center" >
+            <img  src="assets/assets/images/karavan-images/promises/contact.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #004332 !important;">Karavan Cake</h5>
+                        <p style="color: #004332 !important;">We use superior ingredients on all our cakes, 
+                            which we import ourselves from Europe. KERRY, 
+                            our supplier from the United Kingdom is a leader in 
+                            food and beverage ingredients market. Ask for our 2016 
+                            'Cake for all Occasions' catalogue of our creative designs 
+                            and unique styles for all occasions including wedding, birthday, 
+                            graduation and more.</p>
+            </div>
+        </div>
+        <div class="carousel-cell bg-overlay transparent-dark  align-items-center" >
+            <img  src="../../../../assets/assets/images/bg-13.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #004332 !important;">Karavan Cake</h5>
+                        <p style="color: #004332 !important;">We use superior ingredients on all our cakes, 
+                            which we import ourselves from Europe. KERRY, 
+                            our supplier from the United Kingdom is a leader in 
+                            food and beverage ingredients market. Ask for our 2016 
+                            'Cake for all Occasions' catalogue of our creative designs 
+                            and unique styles for all occasions including wedding, birthday, 
+                            graduation and more.</p>
+            </div>
+        </div>
+        
+    </carousel>  -->
 
-        <div  class="section-bg-video grunge-border">
+  
+    <!-- Video -->
+      <div  class="section-bg-video grunge-border" >
             <div class="bg-overlay transparent-dark"></div>
             <div class="videobox" >
-                <!-- <video  autoplay loop muted poster="assets/assets/images/video-1-poster.jpg">
-                    <source src="assets/assets/images/video-1.mp4" type="video/mp4">
-                </video> -->
+              
         
-                <video src="assets/assets/images/video-1.mp4" type="video/mp4" playsinline loop autoplay [muted]="false"></video>
+                <video src="assets/assets/images/Food Film - Cinematic Burger.mp4" type="video/mp4" playsinline loop autoplay [muted]="ismuted"></video>
                 
             </div>
-            <div style="margin-top:100px;" class="container content overlay-content white text-center" data-anima="fade-top" data-timeline="asc" data-time="1000">
+            <div style="" class="container content overlay-content white text-center" data-anima="fade-top" data-timeline="asc" data-time="1000">
                 
-                <h5 class="text-uppercase anima" style="font-weight: bold; font-family:Lithos !important;"> ~ ~ Layers of Happiness! ~ ~</h5>
-                <h2 class="text-bold text-xl anima" style="font-family:Lithos !important;"> KARAVAN COFFEE</h2>
-                <p  class="anima" style="font-weight: bold;">
+                <h2 class="text-bold text-xl anima" style="font-family:Lithos !important; font-size: 80px !important; font-weight:900;"> KARAVAN </h2>
+                <p class="anima layersofhappiness" style=" font-family: Reliant_Free !important;
+                font-size: 35px !important;
+                font-weight: bold;"> Layers of Happiness !</p>
+                <p  class="anima customPadding" style="font-family: Manrope !important;">
                     We believe we are in the business of selling happiness in the form of food and drink. 
                     We source superior ingredients and craft beautifully layered products with 
                     the ultimate objective of making our customers happy. 
                 </p>
-                <a  routerLink="/order" class="btn btn-border btn-sm">Order Now!</a>
                 
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="border: 3px solid #D6B13E !important;" >Order Now!</a>
                 
+                <div>
+                    <a class="custom-Play" style="margin-top: 10px important;" (click)="muteVideo()">
+                        <i *ngIf="ismuted == true" style="font-size:30px"  class="fa fa-microphone-slash" aria-hidden="true"></i>
+                        <i *ngIf="ismuted == false" style="font-size:30px"  class="fa fa-microphone"  aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
+            
+            
+            <div class="overlay-content" style="padding:5px 0px">
+                
+                <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+                </div>
+                <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+                </div>
+                <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+                </div>
+                <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+                </div>
+                <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+                </div>
+            </div>
+     </div>   
+
+
+     <section class="customsection">
+        <div class="customheading" >
+            <!-- <h1>Today's Special Offers</h1> -->
+            <div style=" text-align: center;">
+                <p class="customheadingP">We believe we are in the business of selling happiness in the form of food and drink. 
+                    We source superior ingredients and craft beautifully layered products with 
+                    the ultimate objective of making our customers happy. 
+                </p>
+            </div>
+    </div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; width: 100%;">
+        
+        <div>
+                <div class="container images" >
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Cake</h4>
+                    </div>
+                        
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/food2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Food</h4>
+                    </div>
+                        
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Coffee</h4>
+                    </div>
+
+                </div>
+            </div>
+    
+            
         </div>
     
+     </section>
     <!-- History Section -->
 
-        <div class="section-bg-color">
-                <div class="container content">
-                <div class="row">
-                <div class="col-md-2">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-cool-guy text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="10"></label></b>
-                            <p class="text-s">Years Experience</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-leafs text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="50000"></label></b>
-                            <p class="text-s">Recipients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 text-right">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-coffee text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="10000"></label></b>
-                            <p class="text-s">Customers</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-conference text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="250"></label></b>
-                            <p class="text-s">Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-engineering text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="110"></label></b>
-                            <p class="text-s">Team members</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-2 text-right">
-                    <div class="icon-box icon-box-top-bottom">
-                        <div class="icon-box-cell">
-                            <i class="im-pizza-slice text-xl"></i>
-                        </div>
-                        <div class="icon-box-cell">
-                            <b><label class="counter text-m" data-speed="20000" data-to="123568"></label></b>
-                            <p class="text-s">Pizzas</p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            </div>
-        </div>
+   
 
     
     
         <!-- next to bg-image  next to class : data-sub-height="0" data-bleed="0"-->
-        <div class="section-bg-image parallax-window " data-sub-height="0" data-bleed="0"  data-natural-height="1000" data-natural-width="1920" data-parallax="scroll" style="background-image: url(assets/assets/images/bg-8.jpg);">
+        <!-- <div class="section-bg-image parallax-window "   data-sub-height="0" data-bleed="0"  data-natural-height="1000" data-natural-width="1920" data-parallax="scroll" style="background-image: url(assets/assets/images/karavan-images/promises/welcome.jpg);">
             <div class="container content">
                 <div class="title-base">
                     <hr />
@@ -117,7 +151,6 @@
                             Karavan Coffee makes its best effort to create a unique place where customers can socialize with each other in a 
                             comfortable and relaxing environment while enjoying hot and cold drinks as well as uniquely prepared pastry and food choices.  
                         </p>
-                        <!-- <img src="assets/assets/images/sign-2.png" alt="" /> -->
                         
                         <carousel style="z-index: 1;" [cellsToShow]="2" [loop]="true" [height]="350"  [autoplay]="true" [autoplayInterval]="3000">
                             <div class="carousel-cell">
@@ -234,447 +267,237 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     
     <!-- Menu Section -->
     
-        <div class="section-bg-image parallax-window text-center white" data-natural-height="850" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-12.jpg);">
+        <div class="section-bg-image parallax-window text-center white" data-natural-height="850" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-retro.jpg);">
             <div class="container content">
-                
+<!--                 
                 <div class="row">
                     <div class="col-md-8 col-center">
                         <div class="title-base">
                             <hr />
-                            <h2>Food menu</h2>
-                            <p>Delicious plates for you</p>
+                            <h2 style="color: #004332 !important;">Karavan Menu List</h2>
+                            <p style="color: #004332 !important;">Delicious plates for you</p>
                         </div>
-                        <p class="text-italic">
-                            Tincidunt integer eu augue augue nunc elit dolor luctus placerat scelerisque euismod iaculis eu lacus nunc mi elito
-                            vehicula ut laoreet ac, aliquam sit amet justo nunc tempor metus velio Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunto.
+                        <p class="text-italic" style="color: #004332 !important;">
+                            Karavan Coffee offers its customers the best tasting food 
+                            and beverage products every day. We aim to adhere to high standards
+                             by using superior-quality ingredients and strictly following
+                              preparation guidelines. Karavan Coffees' unique primary
+                             and secondary kitchen system enables quality focused, timely
+                              delivery of large number of menu products to customers’ tables. 
                         </p>
-                        <a routerLink="/welcome" class="btn-border circle-button btn btn-sm">Full list</a>
+                        <a href="/menu" class="swin-btn"><span>See Full List Here!</span></a>
+
+                    </div>
+                </div> -->
+
+                <div class="row" style="margin-top:40px;">
+                <div class="col-md-6 col-xs-12" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine" >
+                    <div class="swin-sc swin-sc-banner item">
+                    <div class="banner-featured-img"><img src="/assets/assets/assets/images/banner-img-1.jpg" alt="fooday" class="img img-responsive">
+                        <div class="banner-content">
+                        <div class="banner-title">KARAVAN COFFEE</div>
+                        <div class="banner-subtitle">NEW DISHES THIS WEEK</div>
+                        <a href="/order" class="swin-btn"><span>Order Now</span></a>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                
+                <div class="col-md-6 col-xs-12" data-aos="flip-right"  data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                    <div class="swin-sc swin-sc-banner right item">
+                    <div class="banner-featured-img"><img src="/assets/assets/assets/images/banner-img-2.jpg" alt="fooday" class="img img-responsive">
+                        <div class="banner-content">
+                        <div class="banner-title">KARAVAN CAKE</div>
+                        <div class="banner-subtitle">OUR HANDMADE PRODUCTS</div>
+                        <a href="/order" class="swin-btn"><span>Order Now</span></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
 
-        <div class="section-bg-image" style="background-image:url(assets/assets/images/bg-retro.jpg)">
+        <!-- <div class="section-bg-image" style="background-image:url(assets/assets/images/bg-retro.jpg)">
             <div class="container content">
-                <div class="title-base">
-                    <hr />
-                    <h2>Our delicious menu</h2>
-                    <p>Enjoy a complete food experience</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-5">
-                        <img src="../../../../assets/assets/images/food-3.png" class="abs-image hidden-sm" alt="" />
+               
+            </div>
+        </div> -->
+    
+        <div class="section-bg-image  text-center white"  style="background-color: white !important;">
+            <div class="container" >
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/promises/coffeep.jpg" alt="" />
                     </div>
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>2 EGG WITH MINCE MEAT</h3>
-                                                <p>Duis aute irure dolor in reprehenderit i esse</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 107</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>4 EGGS COOKED TO YOUR LIKING</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 128</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>DULET</h3>
-                                                <p>Sunt in culpa qui deserunt</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 202</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FETIRA WITH EGG</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 132</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>NORMAL CHECHEBSA</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 138</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>NORMAL FUL</h3>
-                                                <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 154</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>PANCAKE TOWER</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 147</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>SPECIAL CHECHEBSA WITH OLIVE</h3>
-                                                <p>Sunt in culpa qui officia</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 138</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>SPECIAL FULL WITH OLIVE OIL</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 154</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>TOMATO SALSA WITH EGG(SELSE)</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 154</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-6 ">
+                        <div class="title-base ">
+                            <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Coffee</h2>
+                            <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
                         </div>
-                        <a routerLink="/welcome" class="btn-border circle-button btn btn-sm mb-5">See more</a>
+                        
+                        <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                            Coffee loses its aroma shortly after it is grind. 
+                            We never buy grind or powdered coffee. Our coffee is tailor-roasted, 
+                            according to Karavan Coffee secret blend, and grind in-house every 
+                            morning before brewing. 
+                        </p>
+                        <p data-aos="fade-up"   data-aos-duration="2000" style=" font-style: italic; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:#004332 !important;">
+                           Come and Try Our  <a href="#" style="color: #9D5035;">Macchiato!</a>
+                        </p>
+                        <!-- <p class="font-2 text-color text-bold text-l">$ 7.75</p>
+                        <a  routerLink="/order" class="btn btn-border btn-sm" style=" color: #004332 !important; border: 3px solid #D6B13E !important;" >Order Now!</a>
+                     -->
                     </div>
                 </div>
-                
-                <div class="row mt-5">
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>COMBO FOR 4 FASTING</h3>
-                                                <p>Lorem ipsum dolor sit ameto consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 798 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3> ETHIOPIAN CHICKPEAS  (SHERO)</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 154</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>ETHIOPIAN CHICKPEAS WHITH MEAT CURRY</h3>
-                                                <p>Sunt in culpa qui deserunt</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 207</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>ETHIOPIAN LAMB CURRY</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 215</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>ETHIOPIAN LENTIL CURRY</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 188</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>ETHIOPIAN LENTIL CURRY WITH MEAT</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 220</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FASTING BEYAYNET</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 148</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FASTING BEYAYNET WITH FRIED FISH</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 297</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FASTING FER FER (BERBERE & SCRAMBLED INJERA)</h3>
-                                                <p>Sunt in culpa qui deserunt</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 154</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FRIED LAMB TIBS</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 203</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row" style="margin: 0px 0px 50px 0px;">
+                    <div class="col-md-6 align-items-center ">
+                        <div class="title-base ">
+                            <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Cake</h2>
+                            <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
                         </div>
-                        <a routerLink="/welcome" class="btn-border circle-button btn btn-sm mt-5">See more</a>
+                        <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                            We use superior ingredients on all our cakes, 
+                            which we import ourselves from Europe. KERRY, 
+                            our supplier from the United Kingdom is a leader in 
+                            food and beverage ingredients market. Ask for our 2016 
+                            'Cake for all Occasions' catalogue of our creative designs 
+                            and unique styles for all occasions including wedding, birthday, 
+                            graduation and more.
+                        </p>
+                        <p class="font-2 text-color text-bold text-l" data-aos="fade-up"   data-aos-duration="2000">ETB 300.00</p>
+                        <a data-aos="fade-up"   data-aos-duration="2000" routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" >Order Now!</a>
+                    
                     </div>
-                    <div class="col-md-5">
-                        <img src="../../../../assets/assets/images/food-4.png" class="abs-image hidden-sm" alt="" />
+                    <div class="col-md-6" data-aos="fade-up"   data-aos-duration="2000">
+                        <img src="assets/assets/images/karavan-images/promises/cake2.png" alt="" />
+
                     </div>
+
                 </div>
-                
-                <div class="row mt-5">
-                    <div class="col-md-5">
-                        <img src="../../../../assets/assets/images/food-5.png" class="abs-image hidden-sm" alt="" />
+
+                <div class="row align-items-center"  style="padding-bottom:50px;">
+                    <div class="col-md-6">
+                        <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/promises/food2.png" alt="" />
                     </div>
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>FRIED TENDERLOIN MEAT TIBS</h3>
-                                                <p>Duis aute irure dolor in reprehenderit i esse</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 229</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>GOMEN WITH MEAT</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 215</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>GOREDE GOREDE(LEWES WES)</h3>
-                                                <p>Sunt in culpa qui deserunt</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 455</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>MENCHET ABESH</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 215</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>MIXED KEKEL</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 110</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-anima="fade-left">
-                                <div class="list-items">
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>SPECIAL KITFO</h3>
-                                                <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 481</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>SPECIAL LAMB KEKEL</h3>
-                                                <p>Lorem ipsum dolor sit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 220</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>TIBS FER FER (MEAT & SCRAMBLED INJERA)</h3>
-                                                <p>Sunt in culpa qui officia</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 195</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>EGG SANDWICH</h3>
-                                                <p>Excepteur sint occaecat cupidatat non proident</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 215</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-item">
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <h3>TRIPLE DECKER CLUB SANDWICH</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <span>Br. 247</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-6 ">
+                        <div class="title-base ">
+                            <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Food</h2>
+                            <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
                         </div>
-                        <a routerLink="/welcome" class="btn-border circle-button btn btn-sm mt-5">See more</a>
+                        
+                        <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                            Karavan is proud to be able to produce and
+                             offer a very wide range of choices on the menu even 
+                             in the smallest of kitchens. This is due to a unique
+                              system developed by Karavan to split the food preparation 
+                              process and the serving process. Using this modern cleaning,
+                               preparation and portioning method the company 
+                               offers more than 57 food items.
+                        </p>
+                        <p class="font-2 text-color text-bold text-l">ETB 300.00</p>
+                        <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" >Order Now!</a>
+                    
+                        <!-- <p class="font-2 text-color text-bold text-l">$ 7.75</p>
+                        <a  routerLink="/order" class="btn btn-border btn-sm" style=" color: #004332 !important; border: 3px solid #D6B13E !important;" >Order Now!</a>
+                     -->
                     </div>
                 </div>
             </div>
         </div>
-    
-    
+        <!-- style="background-image:url(assets/assets/images/bg-retro.jpg)" -->
+        <!-- <div class="section-bg-image" >
+            <div  style="margin: 40px 50px !important;">
+                <div class="row row-vertical">
+                    <div class="col-md-3" data-anima="fade-left">
+                        <img src="/assets/assets/images/karavan-images/promo/TED07673.png" alt="" />
+                    </div>
+                    <div class="col-md-3">
+                        <div class="title-base text-left">
+                            <h2>Mega Fish Burger Deluxe</h2>
+                            <p>Explosion of great taste</p>
+                        </div>
+                        <p class="progress-label">Carnivorous</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="75">
+                                <span><span>75%</span></span>
+                            </div>
+                        </div>
+                        <p class="progress-label">Vegetarian</p>
+                        <div class="progress">
+                            <div class="progress-bar " data-progress="35">
+                                <span><span>35%</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            Tincidunt integer eu augue augue nunc elit dolor,
+                            luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                            Tincidunt integer eu augue augue nunc elit dolor luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elite sartonetro permo.
+                        </p>
+                        <p class="font-2 text-color text-bold text-l">$ 7.75</p>
+                        <a  routerLink="/order" class="btn btn-border btn-sm" style="border: 3px solid #D6B13E !important;" >Order Now!</a>
+                    </div>
+                </div>
+                <div class="row row-vertical" style="margin-top: 20px;">
+                    <div class="col-md-4">
+                        <div class="title-base text-left">
+                            <h2>Double Cheese Burger</h2>
+                            <p>Explosion of great taste</p>
+                        </div>
+                        <p class="progress-label">Carnivorous</p>
+                        <div class="progress">
+                            <div class="progress-bar" data-progress="60">
+                                <span><span>60%</span></span>
+                            </div>
+                        </div>
+                        <p class="progress-label">Vegetarian</p>
+                        <div class="progress">
+                            <div class="progress-bar " data-progress="40">
+                                <span><span>40%</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <p>
+                            Tincidunt integer eu augue augue nunc elit dolor,
+                            luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                            Tincidunt integer eu augue augue nunc elit dolor luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elite milleporteno.
+                        </p>
+                        <p class="font-2 text-color text-bold text-l">$ 8.50</p>
+                    </div>
+                    <div class="col-md-4" data-anima="fade-right">
+                        <img src="/assets/assets/images/karavan-images/promo/TED07679.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <!-- Gallery Section -->
-    
-        <div class="section-bg-image parallax-window text-center white" data-natural-height="650" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-12.jpg);">
+<!--     
+        <div class="section-bg-image parallax-window text-center white" data-natural-height="650" data-natural-width="1920" data-parallax="scroll"  style="background-image: url(assets/assets/images/bg-retro.jpg);">
                 <div class="row">
                     <div  style="margin-bottom: 30px;"  id="galleryBody">
                         <div class="title-base" style="margin-top: 30px;">
                             <hr />
-                            <h2>Karavan Gallery</h2>
-                            <p>Come and Enjoy!</p>
+                            <h2 style="color: #004332 !important;">Karavan Gallery</h2>
+                            <p style="color: #004332 !important;">Come and Enjoy!</p>
                         </div>
                         <div class="content">
                             <div class="grid-list">
                                 <div class="grid-box">
         
-                                    <carousel style="z-index: 1;"  [cellsToShow]="5" [loop]="true"  [autoplay]="true" [autoplayInterval]="1500">
+                                    <carousel style="z-index: 0;"  [cellsToShow]="5" [loop]="true"  [autoplay]="true" [autoplayInterval]="1500">
                                         <ng-container  *ngFor="let g of galleries">
                                             <div  class="carousel-cell">
-                                                <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
-                                                    <img  [src]="g.imagePath" alt="" />
+                                                <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.title}}" href="{{g.image}}">
+                                                    <img  [src]="g.image" alt="" />
                                                 </a>
                                             </div>
                                         </ng-container>
@@ -683,15 +506,120 @@
                                 </div>
                             </div>
                         </div>
-                        <a routerLink="/gallery" class="btn-border circle-button btn btn-sm">Full list</a>
+                        <a routerLink="/gallery" class="swin-btn mt-5" style="color: #004332 !important;">Full list</a>
                     </div>
             </div>
-        </div>
+        </div> -->
+
+        <!-- History Section -->
     
+        <div class="section-bg-color" style="z-index: 0; background-color: #004332 !important; font-family: Lithos !important;">
+            <div class="container content">
+                <h2 style="text-align: center;color: #D6B13E !important;" data-aos="fade-up"   data-aos-duration="2000">Why Karavan?</h2>
+            <div class="row" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="col-md-2">
+                    <div class="icon-box icon-box-top-bottom">
+                        <div class="icon-box-cell">
+                            <i class="im-conference text-xl"></i>
+                        </div>
+                        <div class="icon-box-cell">
+                        
+                            <i class="fa fa-coffee" style="color:#D6B13E !important" aria-hidden="true"></i>
+                            <div>
+                                <span class="counter text-m" style="color: white;" data-speed="20000" data-to="2000000">
+                                </span>
+                                <i class="fa fa-plus" style="color: white !important; padding: 0px 5px;" aria-hidden="true"></i>
+                            </div>
+                            <p class="text-s" style="color: white;">Macchiato sold at our Flagship branch since opening. </p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-2">
+                <div class="icon-box icon-box-top-bottom">
+                    <div class="icon-box-cell">
+                        <i class="im-cool-guy text-xl"></i>
+                    </div>
+                    <div class="icon-box-cell">
+                        <i class="fa fa-clock-o" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <div>
+                            <span class="counter text-m" style="color: white !important;" data-speed="20000" data-to="25">
+                            </span>
+                            <i class="fa fa-plus" style="color: white !important; padding: 0px 5px;" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-s" style="color: white;">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-right">
+                <div class="icon-box icon-box-top-bottom">
+                    <div class="icon-box-cell">
+                        <i class="im-coffee text-xl"></i>
+                    </div>
+                    <div class="icon-box-cell">
+                        <i class="fa fa-cutlery" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <div>
+                            <span class="counter text-m" style="color: white;" data-speed="20000" data-to="200">
+                            </span>
+                            <i class="fa fa-plus" style="color: white !important; padding: 0px 5px;" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-s" style="color: white;">Varieties of food and beverage items on offer</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-2">
+                <div class="icon-box icon-box-top-bottom">
+                    <div class="icon-box-cell">
+                        <i class="im-leafs text-xl"></i>
+                    </div>
+                    <div class="icon-box-cell">
+                        <i class="fa fa-building-o" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <b><label class="counter text-m" style="color: white;" data-speed="20000" data-to="7"></label></b>
+                        <p class="text-s" style="color: white;">Branches</p>
+                    </div>
+                </div>
+            </div> 
+          
+            <div class="col-md-2 text-right">
+                <div class="icon-box icon-box-top-bottom">
+                    <div class="icon-box-cell">
+                        <i class="im-pizza-slice text-xl"></i>
+                    </div>
+                    <div class="icon-box-cell">
+                        <i class="fa fa-male" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <i class="fa fa-female" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <i class="fa fa-male" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <div>
+                            <span class="counter text-m" style="color: white;" data-speed="20000" data-to="95">
+                            </span>
+                            <i class="fa fa-plus" style="color: white !important; padding: 0px 5px;" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-s" style="color: white;">Trained pastry professionals and food chefs since opening</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-md-2">
+                <div class="icon-box icon-box-top-bottom">
+                    <div class="icon-box-cell">
+                        <i class="im-engineering text-xl"></i>
+                    </div>
+                    <div class="icon-box-cell">
+                        <i class="fa fa-male" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <i class="fa fa-female" style="color:#D6B13E !important" aria-hidden="true"></i>
+                        <i class="fa fa-male" style="color:#D6B13E !important" aria-hidden="true"></i>                            <div>
+                            <span class="counter text-m" style="color: white;" data-speed="20000" data-to="320"></span>  
+                                <i style="color: white !important;  padding: 0px 5px;" class="fa fa-plus" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-s" style="color: white;">Employees</p>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        </div>
+        </div>
         <!-- Contact Section -->
         
-        
-        <div class="section-bg-image text-center" style="background-image: url(../../../../assets/assets/images/bg-13.jpg)">
+        <div class="section-bg-image text-center" style="background-image: url(assets/assets/images/karavan-images/promises/contact.jpg);">
             <div class="container content">
                 <div class="row">
                     <div class="col-md-7 col-center">
@@ -742,34 +670,5 @@
         
             </div>
         </div>
-    
-        <footer>
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-6 footer-center">
-                            <img width="180" src="../../../../assets/assets/images/logos/logo-03.png" alt="" />
-                            <p>
-                                We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                            </p>
-                            <div class="btn-group social-group btn-group-icons">
-                                
-                                <a target="_blank" routerLink="/welcome" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                                <a target="_blank" routerLink="/welcome" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                                <a target="_blank" routerLink="/welcome" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                                <a target="_blank" routerLink="/welcome" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3"></div>
-                    </div>
-                </div>
-                <div class="row copy-row">
-                    <div class="col-md-12 copy-text">
-                        © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a routerLink="/welcome">Karavan Dev Team</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-    
+       
+<app-public-footer></app-public-footer>

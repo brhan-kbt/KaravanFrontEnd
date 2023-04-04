@@ -13,8 +13,8 @@ export class GalleryComponent implements OnInit {
   public isLoadMoreVisible = false;
   public readonly numberOfRecordsOffset = 9;
   public totalNumberOfRecordsToShow = this.numberOfRecordsOffset;
-  data:Gallery[]=[];
-  galleries:Gallery[]=[];
+  data:any[]=[];
+  galleries:any[]=[];
   
   constructor(private gallery:GalleryService) {
     gallery.getGalleries().subscribe((res)=>{

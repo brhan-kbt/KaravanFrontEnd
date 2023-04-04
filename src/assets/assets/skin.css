@@ -39,7 +39,7 @@ body, .adv-img p, .caption-bottom p, .adv-circle .caption p, .advs-box p, p, .ti
         }
 
 .btn-border:after, .nav-tabs > li > a:before, .advs-box-top-icon-img.boxed:not(.niche-box-post):after, .advs-box-blog.boxed:after, .timeline > li > .timeline-badge, .social-group i.circle, .social-button i.circle, .bg-color, .home-fullpage p, .home-fullpage a:hover, .timeline > li:hover > .timeline-badge, ul.side-menu li.active:before, #twosides-menu, .subline-bar, .accordion-list .list-group-item:before, .advs-box-multiple div.circle, .box-social-page, .btn, .circle-button .navbar-inner .nav:not(.ms-rounded) li a:before, .timeline > li:hover > .timeline-badge {
-    background-color: #484848;
+    background-color: #D6B13E;
 }
 
 [class*="col-md-"].boxed, .fa-angle-up.scroll-top, .call-action-box, .ul-dots li:before, .flex-control-paging li a.flex-active, .header-bootstrap, .flex-control-paging li a:hover, .progress-bar, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default, .adv-img-half-content .sub-text, .ot-dtp-picker .ot-dtp-picker-button:hover {
@@ -207,7 +207,7 @@ header.menu-transparent.bg-transparent .navbar {
 }
 
 header.dark-design.scroll-css .navbar-main, footer.dark-design, header .navbar-nav > li > .dropdown-menu, header .dropdown-menu, .white .ot-dtp-picker-form, .white .dark-testimonials.niche-box-testimonails-cloud p {
-    background: #262626 !important;
+    /* background: #262626 !important; */
 }
 
     .white .dark-testimonials.niche-box-testimonails-cloud p:after {
@@ -742,9 +742,12 @@ body .block-quote.quote-1:before, body .block-quote.quote-2:after, body .block-q
         opacity: 1;
     }
 }
+.header-title{
+    height: 400px;
 
+}
 
-.header-title, .header-animation:not(.section-bg-animation), .header-video, .header-slider, .header-slider .flexslider .slides {
+.header-animation:not(.section-bg-animation), .header-video, .header-slider, .header-slider .flexslider .slides {
     height: 500px;
 }
 

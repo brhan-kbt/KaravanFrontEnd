@@ -2,20 +2,257 @@
 <app-navbar></app-navbar>
 
     <div class="header-title ken-burn white" style="background-image: url(assets/assets/images/bg-28.jpg);" >
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
             <div class="title-base">
                 <hr class="anima" />
                 <h1>Photos & videos</h1>
-                <p>Multimedia gallery</p>
+                <p style="font-family: Reliant_Free !important;
+                font-size: 35px !important;
+                font-weight: bold;" >Multimedia gallery</p>
             </div>
         </div>
     </div>
+    <div class="title-base" style="transform: translateY(-100%);">
+        
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+    </div>
+      
+           
+    <div style=" margin-top: -85px !important;">
+        <div class="container content" >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Karavan Popular Foods Gallery</h2>
+                        <p class="words">Feel free to contact us for any problem</p>
+                    </div>
+                    <p class="words text-center" >
+                        Karavan is proud to be able to produce and offer a very wide range of 
+                        choices on the menu even in the smallest of kitchens. This is due to a 
+                        unique system developed by Karavan to split the food preparation process 
+                        and the serving process. Using this modern cleaning, preparation and portioning 
+                        method the company offers more than 57 food items.
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Explore karavans popular food photos below.
+                    </p>
+
+                </div>
+            </div>
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Karavan Popular Bverages Gallery</h2>
+                        <p class="words">Feel free to contact us for any problem</p>
+                    </div>
+                    <p class="words text-center">
+                        Our Drinks category is divided into three sub categories namely Hot, 
+                        Cold and Alcoholic Beverages. We pay special attention to the hot drinks
+                         category as it is a very high margin and high volume category with various 
+                         differentiation possibilities. Cold and Alcoholic drinks are the same everywhere
+                          you go and the competition is stiff. With Hot drinks, the source of coffee and 
+                          tea, the machine used to brew the drinks and the technique and recipe used by 
+                          the barista all make difference on the loyalty of the customers, hence the bottom line. 
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Explore karavans popular beverages photos below.
+                    </p>
+                </div>
+            </div>
 
 
-    <div class="container" id="galleryBody2">
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"   *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Karavan Popular Cakes Gallery</h2>
+                        <p class="words">Feel free to contact us for any problem</p>
+                    </div>
+                    <p class="words text-center">
+                        Karavan is famous for offering high quality pastry products including
+                         slice cakes, dry cakes and torta cakes. Besides the usual Black Forrest
+                          and White Forrest cakes, Karavan has unique offerings such as Opera Cake
+                           and Double Chocolate which are high end choices with unique recipes 
+                           that could not be replicated unless the ingredients are specially sourced. 
+                           To protect the recipe and limit the availability of certain pastry items 
+                           to our shop only, we do not sell the key imported ingredients 
+                           that constitute our special products. 
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Explore karavans popular cakes photos below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Karavan Branches Gallery</h2>
+                        <p class="words">Feel free to contact us for any problem</p>
+                    </div>
+                    <p class="words text-center">
+                        One cannot emphasize enough the importance of choice of location for the success 
+                        and prosperity of food and beverage service businesses. The management strongly 
+                        believe that the main driver behind the success factor of Karavan is the choice 
+                        of location of branches. All our locations are carefully selected and are primly 
+                        located near public transports, cluster of hotels and busy footprint areas. 
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Explore karavans branches photos below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Popular Events Gallery </h2>
+                        <p class="words">Share Your Moments In Our Restaurant</p>
+                    </div>
+                    <p class="words text-center">
+                        We believe we are in the business of selling happiness in the form 
+                        of food and drink. We source superior ingredients and craft beautifully 
+                        layered products with the ultimate objective of making our customers happy. 
+                        If you're looking for somewhere to enjoy beautiful scenic views while indulging your 
+                        taste buds with some delicious culinary creations - look no further than Karavan Restaurant!
+                        <!-- So come and enjoy your moments in our restaurant carefully crafted and decorated product. -->
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Explore karavans popular events photos  below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-base text-center">
+                        <h2 class="words">Training and images during training</h2>
+                        <p class="words">Feel free to contact us for any problem</p>
+                    </div>
+                    <p class="words text-center">
+                        Karavan Restaurant is a well-known pastry and food establishment that has been
+                         in operation for over 25 years. We have trained more than 45 professional
+                          pastry professionals and more than 50 food chefs, which gives us an advantage 
+                          when it comes to creating delicious dishes. Here are some of the photos we took during the training.
+                    </p>
+                    <p class="text-center words" style="font-weight: bold;">
+                        Here are some of the photos we took during the training.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 20px 0px !important;">
+                <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                    <!-- <img  src="{{g.image}}" alt="" /> -->
+                </ng-container>
+                </div>
+                <div  class="loadmorebtn">
+                    <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                        Load More Photos... 
+                    </a>
+                </div>
+            </div>
+        </div>
+         
+    </div> 
+    <!-- <div class="container"  style="padding-top:0 !important" id="galleryBody2">
         <div class="gallery-heading" style="text-align: center; margin: 50px auto;">
             <h1>Our Popular Gallery!</h1>
         </div>
+        
         <div class="select-gallery">
             <div class="card-top container-fluid">
                 <div class="d-flex">
@@ -54,50 +291,20 @@
             </div>
         </div>
         <div class="gallery-body">
-            <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow">
-                <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
-                    <img [src]="g.imagePath" alt="" />
-                </a>
-                <!-- <p>{{g.eventTitle}}</p> -->
-            </ng-container>
-
-            
+            <div id="customgallery">
+                <ng-container *ngFor="let g of data | slice: 0: totalNumberOfRecordsToShow ">
+                    <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+                    <img [src]="g.image" alt="" />
+                    </a>
+                </ng-container>
+            </div>
         </div>
         <div  class="loadmorebtn">
-            <button  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
-                Load More ... 
-            </button>
+            <a class="hover-underline-animation"  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                Load More Photos... 
+            </a>
         </div>
     </div>
-  
-  
-    
+   -->
+    <app-public-footer></app-public-footer>
 
-    <footer>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 footer-center">
-                        <img width="180" src="../../../../assets/assets/images/logos/logo-03.png" alt="" />
-                        <p>
-                            We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                        </p>
-                        <div class="btn-group social-group btn-group-icons">
-                            
-                            <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            </div>
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a href="#">Karavan Dev Team</a>
-                </div>
-            </div>
-        </div>
-    </footer>

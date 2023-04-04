@@ -1,0 +1,126 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Add Product</h1>
+       
+    </div>
+   
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Edit Product</h5>
+                   <form class="row g-3 " [formGroup]="editProductForm">
+
+                     <div class="row form-group">
+                        <div class="col-md-12">
+                           <!-- <input type="hidden" value="1" formControlName="quantity" class="form-control" id="quantity"> -->
+                        </div>
+                     </div>
+                     <div class="row form-group">
+                        <div class="col-md-8">
+                           <label for="productName" class="form-label">Product Name</label> 
+                           <input type="text"  formControlName="productName" class="form-control" [value]="ProductFromDatabase?.productName" id="productName">
+                           <div *ngIf="editProductForm.controls['productName'].dirty && editProductForm.hasError('required', 'productName')" class="text-danger"> * Please, Enter Product Name.</div>
+                        </div>
+                        <div class="col-md-4">
+                           <label for="imagePath" class="form-label">Choose Another_Image</label>
+                           <input type="file" formControlName="imagePath" name="image" class="form-control" (change)="onFileSelect($event)"id="imagePath">
+                           <div *ngIf="editProductForm.controls['imagePath'].dirty && editProductForm.hasError('required', 'imagePath')" class="text-danger"> * Please, Choose an Image.</div>
+                        </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-3">
+                           <label for="productCode" class="form-label">Product Code</label> 
+                           <input type="text" value="{{ProductFromDatabase?.productCode}}" formControlName="productCode" class="form-control" id="productCode">
+                           <div *ngIf="editProductForm.controls['productCode'].dirty && editProductForm.hasError('required', 'productCode')" class="text-danger"> * Please, Enter Product Code.</div>
+                        </div>
+
+                        <div class="col-md-3">
+                           <label for="unitPrice" class="form-label">Product Unit Price</label> 
+                           <input type="text" value="{{ProductFromDatabase?.unitPrice}}" formControlName="unitPrice" class="form-control" id="unitPrice">
+                           <div *ngIf="editProductForm.controls['unitPrice'].dirty && editProductForm.hasError('required', 'unitPrice')" class="text-danger"> * Please, Enter Unit Price.</div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                           <label for="productCategory" class="form-label">Category</label>
+                           <select (change)="getcompanyid($event)" formControlName="productCategory" id="productCategory" class="form-select">
+                              <option selected value=""> {{ProductFromDatabase?.productCategory}}</option>
+                              <ng-container *ngFor="let cat of Category">
+                                 <option value="{{cat.categoryId}}" >{{cat.categoryName}}</option>
+                              </ng-container>
+                            </select>
+                           <div *ngIf="editProductForm.controls['productCategory'].dirty && editProductForm.hasError('required', 'productCategory')" class="text-danger"> * Please, Select Category.</div>
+                        </div>
+
+                           <div class="col-md-3">
+                              <label for="productSubCategory" class="form-label">Sub Category</label>
+                              <select formControlName="productSubCategory" id="productSubCategory" class="form-select" >
+                                 <!-- <ng-container *ngIf="filteredSubCategory.length<=0">
+                                    <option selected></option>
+                                    <option>Select Category First</option>
+                                 </ng-container> -->
+                                 <option selected value=""> {{ProductFromDatabase?.productSubCategory}}</option>
+
+                                 <ng-container *ngFor="let cat of SubCategory">
+                                    <option value="{{cat.categoryId}}">{{cat.subCategoryName}}</option>
+                                 </ng-container>
+                                
+                               </select>
+                              <div *ngIf="editProductForm.controls['productSubCategory'].dirty && editProductForm.hasError('required', 'productSubCategory')" class="text-danger"> * Please, Select Sub Category.</div>
+                           </div>
+                        
+                       
+                     </div>
+
+                     <div class="row form-group">
+                       <div class="col-md-12">
+                        <label for="productDescription" class="form-label">Some Description</label>
+                        <textarea class="form-control" [value]="ProductFromDatabase?.productDescription" formControlName="productDescription" id="productDescription" cols="30" rows="10"> 
+                        </textarea>
+                        <div *ngIf="editProductForm.controls['productDescription'].dirty && editProductForm.hasError('required', 'productDescription')" class="text-danger"> * Please, Enter Some Description.</div>
+                       </div>
+                     </div>
+
+                     <div class="row form-group">
+                        <div class="col-md-12">
+                         <label for="mainIngredients" class="form-label">Tags</label>
+                         <input type="text" value="{{ProductFromDatabase?.mainIngredients}}" formControlName="mainIngredients" id="mainIngredients" class="form-control">
+                         <!-- <div *ngIf="editProductForm.controls['mainIngredients'].dirty && editProductForm.hasError('required', 'mainIngredients')" class="text-danger"> * Please, Enter Product Name.</div> -->
+                        </div>
+                      </div>
+
+                      <div class="row form-group">
+                        <div class="col-md-4">
+                         <label for="rating" class="form-label">Rating</label>
+                         <input type="number" value="{{ProductFromDatabase?.rating}}" max="5" formControlName="rating" class="form-control">
+                         <div *ngIf="editProductForm.controls['rating'].dirty && editProductForm.hasError('required', 'rating')" class="text-danger"> * Please, Enter rating.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="discount" class="form-label">Discount</label>
+                           <input type="number" value="{{ProductFromDatabase?.discount}}" formControlName="discount"  id="discount" class="form-control">
+                           <div *ngIf="editProductForm.controls['discount'].dirty && editProductForm.hasError('required', 'discount')" class="text-danger"> * Please, Enter Discount.</div>
+                        </div>
+
+                        <div class="col-md-4">
+                           <label for="productPoint" class="form-label">Product Points</label>
+                           <input type="number" value="{{ProductFromDatabase?.productPoint}}" formControlName="productPoint" id="productPoint" class="form-control">
+                           <div *ngIf="editProductForm.controls['productPoint'].dirty && editProductForm.hasError('required', 'productPoint')" class="text-danger"> * Please, Enter Product Point.</div>
+                        </div>
+                      </div>
+                      <div class="text-center"> 
+                        <button type="submit" (click)="onAddingProduct()" class="btn btn-primary">Submit</button> 
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>
+ <app-footer></app-footer>

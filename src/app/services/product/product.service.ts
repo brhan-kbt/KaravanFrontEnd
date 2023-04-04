@@ -215,18 +215,51 @@ export class ProductService {
   getAll():Product2[]{
     return this.product;
   }
+  
+  getProducts(){
+    return this.http.get<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Product/")
+          .pipe(map((res:any)=>{
+            // console.log(res);
+            return res;
+          }))
+  }
 
-  saveProduct(data:Product){
+  getProductToBeOrdered(){
+    return this.http.get<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Category")
+          .pipe(map((res:any)=>{
+            // console.log(res);
+            return res;
+          }))
+  }
+  
+  getRelatedProduct(id:any){
+    // console.log(id);
+    return this.http.get<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Category/"+ id)
+          .pipe(map((res:any)=>{
+            // console.log(res);
+            return res;
+          }))
+  }
+  
+
+  saveProduct(data:any){
     console.log(data);
     
-    return this.http.post<any>("https://localhost:7080/api/Product", data)
+    return this.http.post<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Product/", data)
             .pipe(map((res:any)=>{
               return res;
         }))
   }
 
+ 
+  getProductbyId(id:number){
+      return this.http.get<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Product/"+ id)
+          .pipe(map((res:any)=>{
+            return res;
+          }))
+  }
   updateProduct(data:any,id:number){
-     return this.http.put<any>("http://localhost:3000/products"+id,data)
+     return this.http.put<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Product/"+id,data)
           .pipe(map((res)=>{
              return res;
           }))
@@ -239,23 +272,18 @@ export class ProductService {
             }))
   }
   
-  getProducts(){
-    return this.http.get<any>("https://localhost:7080/api/Product")
-          .pipe(map((res:any)=>{
-            console.log(res);
-            return res;
-          }))
-  }
 
-  getProductsFoTesting(){
-    return this.http.get<any>("https://localhost:7080/api/Product")
-          .pipe(map((res:any)=>{
-            console.log(res);
-            return res;
-          }))
-  }
+
+   getProductsFoTesting(){
+     return this.http.get<any>("http://localhost:7080/api/Product")
+           .pipe(map((res:any)=>{
+             console.log(res);
+             return res;
+           }))
+   }
+
   getProductbyID(id:string){
-    return this.http.get<any>("https://localhost:7080/api/Product")
+    return this.http.get<any>("http://zerubabela-001-site1.atempurl.com/api/Product")
           .pipe(map((res:any)=>{
            return res.find((x:any) => x.productCode === id);
           }))
@@ -264,10 +292,26 @@ export class ProductService {
 
 
   getProduct(id:number){
-
     return this.product.find(p=>
       p.id===id
     );
 
   }
+
+
+  getMenu(){
+    return this.http.get<any>("https://fakestoreapi.com/products")
+    .pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+
+  
+  getIngredients(){
+    return this.http.get<any>("http://karavancoffee2-001-site1.dtempurl.com/api/Ingredient")
+    .pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+
 }

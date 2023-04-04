@@ -265,7 +265,8 @@ header {
   width: 100%;
   top: 0; }
   header + div {
-    padding-top: 135px; }
+    /* padding-top: 135px; */
+   }
   header.header-transparent + div {
     padding-top: 0; }
 

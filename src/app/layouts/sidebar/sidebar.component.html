@@ -1,13 +1,20 @@
 <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/dashboard"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a></li>
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/user-mgt"> <i class="bi bi-person"></i> <span>User Management</span> </a></li>
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/order-mgt"> <i class="bi bi-cart"></i> <span>Order Management</span> </a></li>
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/product-mgt"> <i class="bi bi-menu-button-wide"></i> <span>Product Management</span> </a></li>
-       <!-- <li class="nav-item"> <a class="nav-link collapsed" routerLink="/menu-mgt"> <i class="bi bi-menu-button-wide"></i> <span>Menu Management</span> </a></li> -->
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/reward-mgt"> <i class="bi bi-gift"></i> <span>Reward Management</span> </a></li>
-       <li class="nav-item"> <a class="nav-link collapsed" routerLink="/gallery-mgt"> <i class="bi bi-camera"></i> <span>Gallery Management</span> </a></li>
-       <li class="nav-item"> <a class="nav-link collapsed" (click)="logout()" > <i class="bi bi-camera"></i> <span>Logout</span> </a></li>
+      <!-- *ngIf="role != 'Customer'"" -->
+      <ng-container>
+         <li class="nav-item" *ngIf="role!='Branch Admin'"> <a class="nav-link collapsed" routerLink="/dashboard"> <i class="bi bi-grid"></i> <span>Dashboard</span></a></li>
+         <li class="nav-item" *ngIf="role!='Branch Admin'"> <a class="nav-link collapsed" routerLink="/user-mgt"> <i class="bi bi-person"></i> <span>User Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" routerLink="/order-mgt"> <i class="bi bi-cart"></i> <span>Order Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" routerLink="/product-mgt"> <i class="bi bi-menu-button-wide"></i> <span>Product Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" routerLink="/category-mgt"> <i class="bi bi-menu-button-wide"></i> <span>Category Management</span> </a></li>
+         <!-- <li class="nav-item"> <a class="nav-link collapsed" routerLink="/menu-mgt"> <i class="bi bi-menu-button-wide"></i> <span>Menu Management</span> </a></li> -->
+         <li class="nav-item" *ngIf="role!='Branch Admin'"> <a class="nav-link collapsed" routerLink="/reward-mgt"> <i class="bi bi-gift"></i> <span>Reward Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" routerLink="/gallery-mgt"> <i class="bi bi-camera"></i> <span>Gallery Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" routerLink="/branch-mgt"> <i class="bi bi-camera"></i> <span>Branch Management</span> </a></li>
+         <li class="nav-item"> <a class="nav-link collapsed" (click)="logout()" > <i class="bi bi-camera"></i> <span>Logout</span> </a></li>
+      </ng-container>
+
+
 
        <!-- <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i> </a>

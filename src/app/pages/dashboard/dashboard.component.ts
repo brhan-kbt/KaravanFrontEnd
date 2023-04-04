@@ -23,11 +23,12 @@ export class DashboardComponent implements OnInit {
       console.log(this.prods);
     })
 
-    console.log(user.getFullNameFromToken());
+    // console.log(user.getFullNameFromToken());
 
     userStore.getFullnameFromStore().subscribe((val)=>{
       const fullNameFromToken= user.getFullNameFromToken();
       this.name=val || fullNameFromToken;
+      console.log(this.name);
     })
   }
 

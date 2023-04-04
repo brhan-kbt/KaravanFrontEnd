@@ -39,20 +39,102 @@
 
 
 .loadmorebtn{
-     text-align: center;
+     text-align: right;
      margin: 50px auto; 
+     font-style: oblique;
+     color: #D6B13E !important;
 }
 .loadmorebtn button{
-    font-family: Lithos;
+    /* font-family: Lithos; */
     font-size: 20px;
     border-radius: 5px;
     padding: 10px 15px;
-    background-color: orangered;
-    color: #612C2C;
     border: none;
+    background-color: transparent !important;
 }
 
 .loadmorebtn button:hover{
-    color: orangered;
-    background-color: #612C2C;
+    /* color: orangered;
+    background-color: #612C2C; */
+    /* text-decoration: underline; */
 }
+
+.hover-underline-animation {
+    position: relative;
+    /* color: #FFFFFF; */
+    font-size: 20px;
+
+    text-decoration: none;
+  }
+  .hover-underline-animation:hover{
+    color: #D6B13E;
+  }
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #004332;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+    transform: scaleX(0);
+
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+  }
+#customgallery {
+    line-height:0;
+    -webkit-column-count:4; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:4;
+    -moz-column-gap:5px;
+    column-count:4;
+    column-gap:5px;
+  }
+  
+  #customgallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px; /* to match column gap */
+  }
+  
+  
+  
+  @media (max-width: 1200px) {
+    #customgallery {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    #customgallery {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #customgallery {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    #customgallery {
+     -moz-column-count:    1;
+     -webkit-column-count: 1;
+     column-count:         1;
+    }
+  }

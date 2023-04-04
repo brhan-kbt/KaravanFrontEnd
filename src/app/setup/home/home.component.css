@@ -1,0 +1,335 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+/* *{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+
+
+body{
+    background: var(--bg);
+} */
+
+
+.customsection{
+    background-image: url(../../../assets/assets/images/karavan-images/promises/karavan.jpg); 
+    /* height: 80vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.btn{
+    margin-top: 1rem;
+
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+
+    cursor: pointer;
+}
+
+
+.btn:hover{
+
+    letter-spacing: .2rem;
+
+}
+
+.headercustom{
+    /* background: var(--bg); */
+    background: #004332;
+    display: flex;
+    height: 60px;
+    margin-top:3.2rem;
+    align-items: center;
+    justify-content:space-between;
+    padding: 4rem 7%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.headercustom .logocustom{
+    border: 2px solid  #D6B13E;
+    padding: 10px;
+    background: #004332;
+    border-radius: 0px 0px 40px 40px;
+
+}
+
+.headercustom .logocustom img{
+    height: 10rem;
+    background-size: cover;
+    position: relative;
+}
+.headercustom .navbarcustom{
+     display: flex;
+    justify-content: space-around; 
+    /* background: #d3ad7f; */
+    flex-grow: 1;
+    border: 2px solid  #D6B13E;
+    padding: 10px 0px;
+    border-radius: 0px 50px 50px 0px;
+}
+.headercustom .navbarcustom a{
+    /* margin: 0 1rem; */
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0px 10px;
+}
+.headercustom .navbarcustom div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.headercustom .navbarcustom a:hover{
+    color:  #D6B13E !important;
+    border-bottom: .2rem solid   #D6B13E !important;
+    padding-bottom: .5rem !important;
+}
+
+.headercustom .icons  div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.headercustom .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+
+    display: none;
+
+}
+
+.headercustom .search-form{
+    position: absolute;
+    top:115% ;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+
+.headercustom .search-form.active{
+    transform: scaleY(1);
+}
+
+.headercustom .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+
+}
+
+.headercustom .search-form label{
+    cursor:pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+    
+}
+.headercustom .search-form label:hover{
+    color: var(--main-color);
+}
+
+.headercustom .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.headercustom .cart-items-container.active{
+    right: 0;
+}
+
+.headercustom .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+ }
+
+ .headercustom .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color:var(--black)
+ }
+ .headercustom .cart-items-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+ }
+
+
+ .headercustom .cart-items-container .cart-item img{
+    height: 7rem;
+ }
+
+ .headercustom .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+ }
+
+
+ .headercustom .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color:var(
+        --main-color
+    )
+ }
+
+.headercustom .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .headercustom{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+ 
+    #menu-btn{
+        /* display: inline-block; */
+        display: none;
+    }
+    .headercustom{
+        /* display: inline-block; */
+    }
+
+    .headercustom .logo{
+
+        /* width: 100%; */
+        /* position: absolute; */
+        /* display: none; */
+
+    }
+    /* .headercustom .navbarcustom{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh- 9.5rem);
+    }
+
+
+    .headercustom .navbarcustom.active{
+        right: 0;
+    } */
+    /* .headercustom .navbarcustom a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    } */
+
+    .headercustom .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+   
+} 
+
+
+/* 
+body{
+    background: #13131a;
+}
+
+headercustom{
+    
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 30px;
+
+}
+headercustom .navbarcustom{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+headercustom >*{
+    border: 1px solid crimson;
+    height: 50px;
+    width: 100px;
+    background: #d3ad7f;
+}
+
+headercustom .logo img{
+    height: 10rem;
+} */

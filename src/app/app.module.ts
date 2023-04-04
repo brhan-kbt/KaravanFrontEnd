@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {BrowserAnimationsModule}   from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -44,8 +44,28 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MenuComponent } from './setup/menu/menu.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-
-
+import { PublicFooterComponent } from './shared/public-footer/public-footer.component';
+import { PhonemaskDirective } from './directives/phonemask.directive';
+import { BranchlistComponent } from './setup/branchlist/branchlist.component';
+import { AddBranchComponent } from './setup/add-branch/add-branch.component';
+import { DataTablesModule } from 'angular-datatables';
+import { EditProductComponent } from './setup/edit-product/edit-product.component';
+import { EditGalleryComponent } from './setup/edit-gallery/edit-gallery.component';
+import { EditBranchComponent } from './setup/edit-branch/edit-branch.component';
+import { CoffeePageComponent } from './setup/coffee-page/coffee-page.component';
+import { CakePageComponent } from './setup/cake-page/cake-page.component';
+import { FoodPageComponent } from './setup/food-page/food-page.component';
+import { EditUsersComponent } from './setup/edit-users/edit-users.component';
+import { CustomerDashboardComponent } from './setup/customer-dashboard/customer-dashboard.component';
+import { CategoryMgtComponent } from './setup/category-mgt/category-mgt.component';
+import { AddCategoryComponent } from './setup/add-category/add-category.component';
+import { EditCategoryComponent } from './setup/edit-category/edit-category.component';
+import { AddSubCategoryComponent } from './setup/add-sub-category/add-sub-category.component';
+import { MyProfileComponent } from './setup/my-profile/my-profile.component';
+import { EditSubCategoryComponent } from './setup/edit-sub-category/edit-sub-category.component';
+import { SubcategoryMgtComponent } from './setup/subcategory-mgt/subcategory-mgt.component';
+import { OrderDetailListComponent } from './setup/order-detail-list/order-detail-list.component';
+import { CustomerOrderDetailsComponent } from './setup/customer-order-details/customer-order-details.component';
 
 @NgModule({
   declarations: [
@@ -84,16 +104,40 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     LoginComponent,
     MenulistComponent,
     AddMenuComponent,
-    MenuComponent
+    MenuComponent,
+    PublicFooterComponent,
+    PhonemaskDirective,
+    BranchlistComponent,
+    AddBranchComponent,
+    EditProductComponent,
+    EditGalleryComponent,
+    EditBranchComponent,
+    CoffeePageComponent,
+    CakePageComponent,
+    FoodPageComponent,
+    EditUsersComponent,
+    CustomerDashboardComponent,
+    CategoryMgtComponent,
+    AddCategoryComponent,
+    EditCategoryComponent,
+    AddSubCategoryComponent,
+    MyProfileComponent,
+    EditSubCategoryComponent,
+    SubcategoryMgtComponent,
+    OrderDetailListComponent,
+    CustomerOrderDetailsComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgToastModule,
     NgxPaginationModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    DataTablesModule,
+
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

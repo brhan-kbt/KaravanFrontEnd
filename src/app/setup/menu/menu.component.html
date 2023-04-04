@@ -1,20 +1,88 @@
 <app-navbar></app-navbar>
-<div class="header-title ken-burn white"   style=" background-image: url(../../../../assets/assets/images/bg-28.jpg);">
-    <div >
+<div class="header-title ken-burn white" style="position: relative;"   style=" background-image: url(../../../../assets/assets/images/bg-28.jpg);">
         <div class="title-base" style=" position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);">
             <h1>Menu list of Karavan</h1>
-            <p>Choose whatever you want.</p>
+            <p style=" font-family: Reliant_Free !important;
+            font-size: 35px !important;
+            font-weight: bold;">Choose whatever you want.</p>
         </div>
+
+    
+   
+</div>
+
+<div class="title-base" style="transform: translateY(-100%);">
+                
+     
+    <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+    </div>
+    <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+    </div>
+    <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+    </div>
+    <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+    </div>
+    <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
     </div>
 </div>
 
 
   <div class="section-empty">
-    <div class="container content">
-        <div class="row">
+    <div class="container content" style="padding-top: 0 !important;">
+       
+         <!-- <div class="row"  data-anima="fade-left">
+            <div class="col-md-5">
+                <img  style="border-radius: 50%; height: 400px !important ; width: 500px !important;  padding: 20px; " [src]="imageScr" class="abs-image hidden-sm" alt="" />
+            </div>
+            <div class="col-md-7">
+                <div class="title-base text-left">
+                    <h2>Breakfast menu</h2>
+                    <p>Enjoy a sunny day with our breakfast</p>
+                </div>
+                <div class="row">
+
+                    <ng-container  *ngFor="let item of product; let i= index" >
+                        <ng-container *ngIf="item.category.name=='Furniture'">
+                            <div class="col-md-6">
+                                <div class="list-items" (mouseover)="changeImage(item.images[0])" >
+                                    <div class="list-item">
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <h3>{{item.title}}</h3>
+                                                <p>{{item.category.name}}</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>Birr {{item.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <h3>Crispy skin Cone </h3>
+                                                <p>Lorem ipsum dolor sit</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <span>4.99$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                        
+                    </ng-container> 
+                </div>
+                <a  *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()" class="btn-border circle-button btn btn-sm">See more</a>
+            </div>
+        </div>  -->
+
+         <div class="row">
             <div class="col-md-5">
                 <img src="../../../../assets/assets/images/block-10.jpg" class="abs-image hidden-sm" alt="" />
             </div>
@@ -24,121 +92,29 @@
                     <p>Enjoy a sunny day with our breakfast</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="list-items" >
-                            <div class="list-item">
-                              <!-- <h1>{{bf.length}} and {{}}</h1> -->
-                               
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Grass beef fillet</h3>
-                                        <p>Lorem ipsum dolor sit</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>9$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Deboned king quail</h3>
-                                        <p>Sunt in culpa qui deserunt</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Confit of lamb</h3>
-                                        <p>Excepteur sint occaecat cupidatat non proident</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>15$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Twice cooked duck </h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>21$</span>
+                    <ng-container *ngFor="let p of product  | slice: 0: totalNumberOfRecordsToShow">
+                        <div class="col-md-6">
+                            <div class="list-items">
+                                <div class="list-item">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h3>{{p.title}}</h3>
+                                            <p>Lorem ipsum dolor sit</p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span>{{p.price}}$</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="list-items">
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Steamed king crab</h3>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>9$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Roast partridge</h3>
-                                        <p>Lorem ipsum dolor sit</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>9$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Salad of shaved fenne</h3>
-                                        <p>Sunt in culpa qui officia</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Beetroot cured kingfish</h3>
-                                        <p>Excepteur sint occaecat cupidatat non proident</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>10$</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h3>Wild mushroom ragout</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span>21$</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="btn-border circle-button btn btn-sm">See more</a>
+                    </ng-container>
+                   </div>
+                <a *ngIf="isLoadMoreVisible" type="button" (click)="loadMoreButtonClicked()" class="btn-border circle-button btn btn-sm mt-5">Load more</a>
             </div>
         </div>
+        <hr>
+
         <div class="row" data-anima="fade-right">
             <div class="col-md-7">
                 <div class="title-base text-left">
@@ -266,12 +242,15 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn-border circle-button btn btn-sm">See more</a>
+                <a href="#" class="btn-border circle-button btn btn-sm mt-5">Load more</a>
             </div>
             <div class="col-md-5">
                 <img src="../../../../assets/assets/images/block-11.jpg" class="abs-image hidden-sm" alt="" />
             </div>
         </div>
+
+        <hr>
+
         <div class="row" data-anima="fade-left">
             <div class="col-md-5">
                 <img src="../../../../assets/assets/images/block-12.jpg" class="abs-image hidden-sm" alt="" />
@@ -402,37 +381,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn-border circle-button btn btn-sm">See more</a>
+                <a href="#" class="btn-border circle-button btn btn-sm mt-5">Load more</a>
             </div>
         </div>
     </div>
+
+    
   </div>
 
-<footer>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6 footer-center">
-                    <img width="180" src="../../../../assets/assets/assets/images/logos/logo-03.png" alt="" />
-                    <p>
-                        We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                    </p>
-                    <div class="btn-group social-group btn-group-icons">
-                        
-                        <a target="_blank" routerLink="/welcome" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                        <a target="_blank" routerLink="/welcome" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" routerLink="/welcome" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                        <a target="_blank" routerLink="/welcome" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-        </div>
-        <div class="row copy-row">
-            <div class="col-md-12 copy-text">
-                © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a routerLink="/welcome">Karavan Dev Team</a>
-            </div>
-        </div>
-    </div>
-</footer>
+<app-public-footer></app-public-footer>

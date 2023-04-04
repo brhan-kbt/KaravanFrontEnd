@@ -1,0 +1,130 @@
+<app-navbar></app-navbar>
+
+
+    <div id="pagewrap" class="pagewrap" style="background: white !important; margin-top: 50px;z-index: 10000 !important;">
+        <div class="page-content-wrapper" style="background: white;">
+              <div class="container card" style="margin-top: 50px !important;padding: 50px;">
+                        <div class="card-title" style="color:#004332; font-weight: bold; font-size: 30px;">
+                            User Details 
+                        </div>
+                        <div class="title-base" style="transform: translateY(-100%);">
+                            <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                            </div>
+                            <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                            </div>
+                            <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                            </div>
+                            <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 1px;">
+                            </div>
+                            <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 2px; margin-top: 1px;">
+                            </div>
+                      </div>
+                      <form [formGroup]="updateUserForm">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="row">
+                                <img [src]="user.imagePath" alt="Profile"/>
+                              </div>
+                              <div class="row">
+                                <label for="imagePath">Change Profile Image</label>
+                                <input type="file" (change)="onFileSelect($event)" (click)="checkBtn()"  >
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="row">
+                                <div class="col-4 userheader">
+                                  Name :
+                                </div>
+                                <div class="col-8 userinfo">
+                                  {{user.fullName}}
+                                </div>
+                              </div>
+                              <hr class="userhr">
+                            
+                              <div class="row">
+                                <div class="col-4 userheader">
+                                  Email :
+                                </div>
+                                <div class="col-8 userinfo">
+                                  {{user.email}}
+                                </div>
+                              </div>
+                              <hr class="userhr">
+                          
+                              <div class="row">
+                                <div class="col-4 userheader">
+                                  Gender :
+                                </div>
+                                <div class="col-8 userinfo">
+                                  <div class="form-group">
+                                    <select (click)="checkBtn()"  formControlName="gender" class="form-control" style="border: 2px solid #004332  !important; border-radius: 10px; width: 60%; padding: 5px;color:#004332 !important; font-weight:bold !important;" id="gender">
+                                      <option *ngIf="user.gender==null" value="">Select Gender</option>
+                                      <option *ngIf="user.gender!=null" value="" >{{user.gender}}</option>
+                                      <option value="male">Male</option>
+                                      <option value="female">Female</option>
+                                      <option value="other">Other</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr class="userhr">
+                              <div class="row">
+                                <div class="col-4 userheader">
+                                  Birth Date :
+                                </div>
+                                <div class="col-8 userinfo">
+                                 <div class="row">
+                                  {{date}}
+                                 </div> 
+                                 <div class="row">
+                                  <div class="col-4" style="font-size: 8px;">
+                                    Change DOB:
+                                  </div>
+                                  <div class="col-6">
+                                    <input type="date"  formControlName="birthDate" (click)="checkBtn()" style="border: 2px solid #004332  !important; border-radius: 10px; padding: 5px;color:#004332 !important; font-weight:bold !important;" id="date">
+                                  </div>
+                                 </div>
+                                </div>
+                              </div>
+                              <hr class="userhr">
+                            </div>
+                            <div class="col-md-4">
+                        
+                              <div class="row">
+                                <div class="col-4 userheader">
+                                  Your Points :
+                                </div>
+                                <div class="col-8 userinfo">
+                                  90
+                                </div>
+                              </div>
+                              <hr class="userhr">
+
+                               <div class="row">
+                                <div class="col-4 userheader">
+                                  Role :
+                                </div>
+                                <div class="col-8 userinfo">
+                                  {{user.role}}
+                                </div>
+                              </div>
+                              <hr class="userhr">
+                            </div>
+
+                            <ng-container *ngIf="btnFlag==true">
+                              <div class="text-end" style="margin-top: 20px !important;">
+                                <div>
+                                  <a (click)="onUpdate()" class="btn btn-border btn-sm userbtn float-right" >Save Change!</a>
+                                </div>
+                              </div>
+                          </ng-container>
+                        </div>
+                      </div>
+                    </form>
+        </div>
+    </div>
+      
+    
+    
+    <app-public-footer></app-public-footer>

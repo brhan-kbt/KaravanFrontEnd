@@ -16,7 +16,8 @@
                         <div class="col-md-6"> 
                            <label for="fullName" class="form-label">Full Name</label> 
                            <input type="text" formControlName="fullName"  class="form-control" id="fullName">
-                           <div class="text-danger" *ngIf="addUserForm.controls['fullName'].dirty && addUserForm.hasError('required', 'fullName')"> * Please, Enter Full Name</div>
+                           <div class="text-danger" *ngIf="addUserForm.controls['fullName'].dirty && addUserForm.hasError('required','fullName')"> * Please, Enter Your First Name!</div>
+                           <!-- <div class="text-danger" *ngIf="addUserForm.controls['fullName'].dirty && addUserForm.hasError('pattern','fullName')"> *No Space Allowed!</div> -->
                         </div>
                         <div class="col-md-6"> 
                            <label for="email" class="form-label">Email</label> 
@@ -27,40 +28,58 @@
                      </div>
                      
                      <div class="form-group row">
-                        <div class="col-md-6"> 
+                        <div class="col-md-4"> 
                            <label for="phoneNumber" class="form-label">Phone Number</label> 
                            <input type="text" formControlName="phoneNumber" class="form-control" id="phoneNumber">
-                           <div class="text-danger" *ngIf="addUserForm.controls['phoneNumber'].dirty && addUserForm.hasError('required', 'phoneNumber')"> * Please, Enter Phone Number</div>
-   
-                        </div>
-   
-                        <div class="col-md-6"> 
-                           <label for="username" class="form-label">Username</label> 
-                           <input type="text" formControlName="username" class="form-control" id="username">
-                           <div class="text-danger" *ngIf="addUserForm.controls['username'].dirty && addUserForm.hasError('required', 'username')"> * Please, Enter Username</div>
-   
-                        </div>
-                     </div>
+                           <div class="text-danger" *ngIf="addUserForm.controls['phoneNumber'].dirty && addUserForm.hasError('required','phoneNumber')"> * Please Enter a Phone Number.</div>
+                           <div class="text-danger" *ngIf="addUserForm.controls['phoneNumber'].dirty && addUserForm.hasError('pattern','phoneNumber')"> * Phone Should be in this format <strong>251905280270</strong> .</div>
 
-                     
-                     <div class="form-group row">
-                        <div class="col-md-6"> 
+                        </div>
+                        <div class="col-md-4"> 
                            <label for="password" class="form-label">Password</label> 
                            <input type="password" formControlName="password" class="form-control" id="password">
-                           <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('required', 'password')"> * Please, Enter Password</div>
-   
+                           <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('required','password')"> *Please Enter a Password!</div>
+                           <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('minlength','password')"> *Must contain 6 characters with at least 1 number!</div>
+                           <!-- <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('hasNumber','password')"> *Must contain at least 1 number!</div> -->
+                           <!-- <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('hasCapitalCase','password')"> *Must contain at least 1 Letter in Capital Case!</div> -->
+                           <!-- <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('hasSmallCase','password')"> *Must contain at least 1 Letter in Small Case!</div> -->
+                           <!-- <div class="text-danger" *ngIf="addUserForm.controls['password'].dirty && addUserForm.hasError('hasSpecialCharacters','password')"> *Must contain at least 1 Special Character in Capital Case!</div> -->
+                           
                         </div>
-                        <div class="col-md-6"> 
-                           <label for="userType" class="form-label">Type</label>
-                           <select formControlName="userType" id="userType" class="form-select">
-                              <option value="">Select User Role</option>
+                        <div class="col-md-2"> 
+                           <label for="role" class="form-label">Type</label>
+                           <select formControlName="role" id="role" class="form-select">
+                              <option value="">Select Role</option>
                               <option value="Administrator">Administrator</option>
                               <option value="Customer">Customer</option>
                               <option value="System Admin">System Admin</option>
                               <option value="Branch Admin">Branch Admin</option>
                             </select>
-                            <div class="text-danger" *ngIf="addUserForm.controls['userType'].dirty && addUserForm.hasError('required', 'userType')"> * Please, Select User Type</div>
+                            <div class="text-danger" *ngIf="addUserForm.controls['role'].dirty && addUserForm.hasError('required', 'role')"> * Please, Select User Type</div>
                         </div>
+                        <div class="col-md-2"> 
+                           <label for="branchId" class="form-label">Branch</label>
+                           <select formControlName="branchId" id="branchId" class="form-select">
+                              <option value="">Select Branch</option>
+                              <ng-container *ngFor="let b of branch">
+                                 <option value="{{b.branchId}}">{{b.branchName}}</option>
+                              </ng-container>
+                              <!-- <option value="2">Megenagna</option>
+                              <option value="3">TD</option>
+                              <option value="4">AT</option> -->
+                            </select>
+                            <div class="text-danger" *ngIf="addUserForm.controls['role'].dirty && addUserForm.hasError('required', 'role')"> * Please, Select User Type</div>
+                        </div>
+                       <!-- <div class="col-md-6"> 
+                           <label for="birthDate" class="form-label">Birth Date</label>
+                           <input formControlName="birthDate"  class="form-control" type="date">
+                        </div>  -->
+                     </div>
+
+                     
+                     <div class="form-group row">
+                        
+                        
                      </div>
 
                     

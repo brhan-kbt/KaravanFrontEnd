@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Gallery } from 'src/app/models/gallery';
 import { GalleryService } from 'src/app/services/gallery/gallery.service';
 
@@ -9,14 +10,23 @@ import { GalleryService } from 'src/app/services/gallery/gallery.service';
 })
 export class GallerylistComponent implements OnInit {
   galleryList:Gallery[]=[];
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
   constructor(private serv:GalleryService) {
 
-      serv.getGalleries().subscribe((res)=>{
-        this.galleryList=res;
+      serv.getGalleriesForAdmin().subscribe((res)=>{
+        this.galleryList=res.data;
+        console.log();
+        
+        console.log(this.galleryList);
+        
+        this.dtTrigger.next(this.galleryList);
       })
    }
 
   ngOnInit(): void {
   }
-
+  ngOnDestroy(): void {
+    this.dtTrigger.unsubscribe();
+  }
 }

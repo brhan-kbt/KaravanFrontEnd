@@ -1,0 +1,53 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Edit Category</h1>
+       
+    </div>
+    <section class="section">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body">
+                   <h5 class="card-title">Edit Category Form</h5>
+                   <form class="row g-3 " [formGroup]="editCategory">
+                     <div class="form-group row">
+                        <div class="col-md-6"> 
+                           <label for="branchName" class="form-label">Category Name</label> 
+                           <input type="text" formControlName="categoryName" value="{{CategoryFromDatabase?.categoryName}}"  class="form-control" id="categoryName">
+                           <!-- <div class="text-danger" *ngIf="editCategory.controls['categoryName'].dirty && editCategory.hasError('required','categoryName')"> * Please, Enter Your Branch Name!</div> -->
+                           <!-- <div class="text-danger" *ngIf="editCategory.controls['categoryName'].dirty && editCategory.hasError('pattern','categoryName')"> *No Space Allowed!</div> -->
+                        </div>
+                        <div class="col-md-6"> 
+                           <label for="categoryDescription" class="form-label">Category Description</label> 
+                           <input type="categoryDescription" value="{{CategoryFromDatabase?.categoryDescription}}"  formControlName="categoryDescription" class="form-control" id="emal">
+                           <!-- <div class="text-danger" *ngIf="editCategory.controls['categoryDescription'].dirty && editCategory.hasError('required', 'categoryDescription')"> * Please, Enter Branch Code</div> -->
+   
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <div class="col-md-4">
+                            <img [src]="CategoryFromDatabase?.imagePath" alt="" srcset="">
+                         </div>
+                        <div class="col-md-4">
+                            <label for="imagePath" class="form-label">Choose Another Image</label>
+                            <input type="file" formControlName="imagePath" name="image" class="form-control" (change)="onFileSelect($event)"id="imagePath">
+                            <!-- <div *ngIf="editCategory.controls['imagePath'].dirty && editCategory.hasError('required', 'imagePath')" class="text-danger"> * Please, Choose an Image.</div> -->
+                         </div>
+                     </div>
+                    
+                    
+                      <div class="text-center"> 
+                        <button type="submit" (click)="onAddingCategory()" class="btn btn-primary">Submit</button> 
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                     </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>
+<app-footer></app-footer>

@@ -1,120 +1,154 @@
 <app-navbar></app-navbar>
 
 
-    <div id="pagewrap" class="pagewrap">
+    <div id="pagewrap" class="pagewrap" style="background: white !important;">
         <div id="html-content" class="wrapper-content">
-       
-          <div class="page-container">
-            <div data-bottom-top="background-position: 50% 50px;" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -50px;" class="page-title page-product">
-              <div class="container">
-                <div class="title-wrapper">
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(-5px);" data--50-top="transform: translateY(-15px);opacity:0.8;" data--120-top="transform: translateY(-30px);opacity:0;" data-anchor-target=".page-title" class="title">Product Cart</div>
-                  <div data-top="opacity:1;" data--120-top="opacity:0;" data-anchor-target=".page-title" class="divider"><span class="line-before"></span><span class="dot"></span><span class="line-after"></span></div>
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(5px);" data--50-top="transform: translateY(15px);opacity:0.8;" data--120-top="transform: translateY(30px);opacity:0;" data-anchor-target=".page-title" class="subtitle">We hope you will like this product and give us 5 star rating</div>
-                </div>
-              </div>
-            </div>
-            <div class="page-content-wrapper">
-              <div class="container">
-                <section class="padding-top-100 padding-bottom-100">
-
-                 <form class="product-cart-form">
-                    <table class="shop_table shop_table_responsive">
-                      <thead>
-                        <tr>
-                          <th class="product-remove"> </th>
-                          <th class="product-thumbnail"> </th>
-                          <th class="product-name">Product</th>
-                          <th class="product-price">Price</th>
-                          <th class="product-quantity">Quantity</th>
-                          <th class="product-subtotal">Total</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr *ngFor="let item of items; let i = index" class="cart_item">
-                          <td class="product-remove">
-                            <a href="#" aria-label="Remove this item" data-product_id="1061" data-product_sku="" (click)="onDelete(i)" class="remove">×</a>
-                          </td>
-                          <td class="product-thumbnail"><a href="#"><img width="150" height="100" src="{{item.imagePath}}" alt="" class="img-responsive"></a></td>
-                          <td data-title="Product" class="product-name"><a href="#">{{item.productName}}</a></td>
-                          <td data-title="Price" class="product-price"><span class="product-Price-amount amount"><span class="product-Price-currencySymbol">$</span>{{item.unitPrice}}</span></td>
-                          <td data-title="Quantity" class="product-quantity">
-                            <div class="quantity">
-                              <input type="number" min="1" max=""  name="quantity"  size="4" [value]="item.quantity"  (blur)="validateInput($event, i)" pattern="[0-9]*" inputmode="numeric" class="form-control input-qty">
-                            </div>
-                          </td>
-                          <td data-title="Total" class="product-subtotal"><span class="product-Price-amount amount"><span class="product-Price-currencySymbol">$</span>{{item.quantity * item.unitPrice}}</span></td>
-                        </tr>
-                      
-                        <tr>
-                          <td colspan="6" class="product-coupon">
-                            <div class="actions">
-                              <!-- <div class="coupon">
-                                <input type="text" name="coupon_code" value="" placeholder="Coupon code" class="form-control input-coupon">
-                                <input type="button" name="apply_coupon" value="Apply coupon" class="swin-btn">
-                              </div> -->
-                              <input type="button" name="update_cart" value="Update cart" class="swin-btn f-right">
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </form> 
-                  <div class="product-cart-total">
-                    <div class="row">
-                      <div class="col-md-6 col-md-offset-6">
-                        <h2 class="cart-total-title">Cart Totals</h2>
-                        <table cellspacing="0" class="shop_table">
-                          <tbody>
-                            <tr class="cart-subtotal">
-                              <th class="mr-1">Subtotal</th>
-                              <td data-title="Subtotal"><span class="product-amount amount"><span class="product-currencySymbol">$</span>0.0</span></td>
-                            </tr>
-                            <tr class="order-total">
-                              <th>Total</th>
-                              <td data-title="Total"><strong><span class="product-amount amount"><span class="product-currencySymbol">$</span>{{total}}</span></strong></td>
-                            </tr>
-                          </tbody>
-                        </table><a href="/checkout" class="swin-btn"><span>Process To Checkout</span></a>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-       </div>
-     
-    </div>
-    
-    
-    <footer>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 footer-center">
-                        <img width="180" src="../../../../assets/assets/images/logos/logo-03.png" alt="" />
-                        <p>
-                            We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                        </p>
-                        <div class="btn-group social-group btn-group-icons">
-                            
-                            <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            </div>
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a href="#">Karavan Dev Team</a>
+          <div class="header-title ken-burn white" style="background-image: url(../../../../assets/assets/images/bg-28.jpg)">
+            <div style="position: absolute; top: 40%; left: 50%; transform:translate(-50%, -50%);">
+                <div class="title-base">
+                    <h1>Product Cart</h1>
+                    <p style="font-family: Reliant_Free !important;
+                    font-size: 35px !important;
+                    font-weight: bold;">Shop What-ever You Want!</p>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="title-base" style="transform: translateY(-100%);">
+       
+          <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+          </div>
+          <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+          </div>
+          <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+          </div>
+          <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+          </div>
+          <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+          </div>
+      </div>
+         
+            <div class="page-content-wrapper" style="background: white;">
+              <ng-container *ngIf="items.length>=1">
+              <div class="container card">
+                <div style="padding: 30px !important;">
+                  <section class="padding-bottom-100 row ">
+                  <div class="col-md-8">
+                   <form class="product-cart-form">
+                      <table class="shop_table shop_table_responsive">
+                        <thead style="background-color: #004332 !important; opacity: 0.7;">
+                          <tr>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-thumbnail"> </th>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-name">Product</th>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-price">Price</th>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-quantity">Quantity</th>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-subtotal">Total</th>
+                            <th style="color: white !important; font-weight: bold !important;" class="product-remove"> Remove</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of items; let i = index" class="cart_item">
+                           
+                            <td class="product-thumbnail"><a href="#"><img width="150" height="100" src="{{item.imagePath}}" alt="" class="img-responsive"></a></td>
+                            <td data-title="Product" >{{item.productName}}</td>
+                            <td data-title="Price" ><span class="product-Price-amount amount"><span class="product-Price-currencySymbol">ETB </span>{{item.unitPrice}}</span></td>
+                            <td data-title="Quantity" class="product-quantity">
+                              <div class="quantity">
+                                <input type="number" min="1" max=""  name="quantity"  size="4" [value]="item.quantity"  (blur)="validateInput($event, i)" pattern="[0-9]*" inputmode="numeric" class="form-control input-qty">
+                              </div>
+                            </td>
+                            <td data-title="Total" class="product-subtotal"><span class="product-Price-amount amount"><span class="product-Price-currencySymbol">ETB </span>{{item.quantity * item.unitPrice}}</span></td>
+                            <td class="product-remove">
+                              <a href="#" aria-label="Remove this item" data-product_id="1061" data-product_sku="" (click)="onDelete(i)" class="remove">
+                                <i class="fa fa-trash" style="color: red;" aria-hidden="true"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </form>
+                    
+                  </div>
+                  
+                  <div class="col-md-4 card" style="background-color: rgb(204, 202, 202);">
+                    <div class="product-cart-total" style="padding: 30px !important;">
+                      <div class="row">
+                       
+                        <div class="col-md-6-12">
+                          <h2 class="cart-total-title">Summary</h2>
+                          <hr>
+                          <table cellspacing="0">
+                            <tbody>
+                              <tr>
+
+                              </tr>
+                              <tr>
+                                <th>Sub Total </th>
+                                <td>{{total}} ETB</td>
+                              </tr>
+
+                              <tr>
+                                <th>VAT (15%) </th>
+                                <td>{{(15*total)/100}} ETB</td>
+                              </tr>
+
+                              <tr>
+                                <th>TOTAL </th>
+                                <td>{{total + (15*total)/100}} ETB</td>
+                              </tr>
+                              <!-- <tr class="cart-subtotal">
+                                <th class="mr-1"></th>
+                                <td data-title="Subtotal"><span class="product-amount amount"><span class="product-currencySymbol">$</span></span></td>
+                              </tr>
+                              <tr class="order-total">
+                                <th>Total</th>
+                                <td data-title="Total"><strong><span class="product-amount amount"><span class="product-currencySymbol">$</span></span></strong></td>
+                              </tr> -->
+                            </tbody>
+                          </table><a (click)="checkIfLogged()"  class="swin-btn"><span>Process To Checkout</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  </section>
+                </div>
+              </div>
+            </ng-container>
+              
+                <div class="container">
+                  <ng-container *ngIf="items.length<1">
+                    <div class="card">
+                      <div class="row flex justify-content-center align-items-center"  style="padding: 50px;">
+                        <div class="col-md-6">
+                          <h6 class="h3 text-danger">No Product in Cart!</h6>
+                          <a routerLink="/order"  class="swin-btn checkout-submit float-start"><span>Shop Now! </span></a>
+                        </div>
+                        <div class="col-md-6">
+                          <img style="height:20rem" src="assets/assets/images/karavan-images/bg/shop.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="assets/assets/images/karavan-images/promo/promo1.gif" alt="">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="assets/assets/images/karavan-images/promo/promo1.gif" alt="">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="assets/assets/images/karavan-images/promo/promo1.gif" alt="">
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+             
+            </div>
+          </div>
     
     
+    <app-public-footer></app-public-footer>

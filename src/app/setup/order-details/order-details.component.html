@@ -1,222 +1,214 @@
 <app-navbar></app-navbar>
+<div id="pagewrap" class="pagewrap" style="background: white !important;">
+  <div id="html-content" class="wrapper-content">
+  <div class="header-title ken-burn white" style="background-image: url(assets/assets/images/bg-28.jpg);" >
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="title-base">
+            <h1>Add To Cart</h1>
+            <p>Enjoy your day with our special offers</p>
+        </div>
+    </div>
+  </div>
+  </div>
 
 
-    <div id="pagewrap" class="pagewrap">
-        <div id="html-content" class="wrapper-content">
-        
-          <div class="page-container">
-            <div data-bottom-top="background-position: 50% 50px;" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -50px;" class="page-title page-product">
-              <div class="container">
-                <div class="title-wrapper">
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(-5px);" data--50-top="transform: translateY(-15px);opacity:0.8;" data--120-top="transform: translateY(-30px);opacity:0;" data-anchor-target=".page-title" class="title" style="font-family: Lithos;">Single Product</div>
-                  <div data-top="opacity:1;" data--120-top="opacity:0;" data-anchor-target=".page-title" class="divider"><span class="line-before"></span><span class="dot"></span><span class="line-after"></span></div>
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(5px);" data--50-top="transform: translateY(15px);opacity:0.8;" data--120-top="transform: translateY(30px);opacity:0;" data-anchor-target=".page-title" class="subtitle">We hope you will like this product and give us 5 star rating</div>
+<div class="title-base" style="transform: translateY(-100%);">
+
+<div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+</div>
+<div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+</div>
+<div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+</div>
+<div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+</div>
+<div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+</div>
+</div>
+
+<div class="page-content-wrapper" style="background: white;">
+
+    <div class="container">
+      <section class="product-single padding-bottom-100">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="product-image">
+              <div class="product-featured-image">
+                <div class="main-slider">
+                  <div class="slides">
+                    <div class="featured-image-item"><img src="{{product.imagePath}}" alt="{{product.productName}}" class="img img-responsive"></div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="page-content-wrapper">
-              <div class="container">
-                <section class="product-single padding-top-100 padding-bottom-100">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="product-image">
-                        <div class="product-featured-image">
-                          <div class="main-slider">
-                            <div class="slides">
-                              <div class="featured-image-item"><img src="{{product.imagePath}}" alt="fooday" class="img img-responsive"></div>
-                              </div>
-                          </div>
-                         
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="product-summary">
-                        <div class="product-title">
-                          <div class="title">{{product.productName}}</div>
-                        </div>
-                        <div class="product-price">
-                          <div class="price" style="color: black;"><span class="currency-symbol" style="color: white;" >Br </span>{{product.unitPrice}}</div>
-                        </div>
-                        <div class="product-info">
-                          <ul class="list-inline">
-                            <li class="author"><span>Chef</span><span class="text">{{product.productCategory}}</span></li>
-                            <li class="rating"><a href="javascript:void(0)"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a><span>4 Reviews</span></li>
-                          </ul>
-                        </div>
-                        <div class="product-desc">
-                          <p>
-                            {{product.description}}
-                          </p>
-                        </div>
-                        <div class="product-meta-info">
-                          <div class="meta-info-item">
-                            <div class="meta-info-caption">Category:</div>
-                            <div class="meta-info-text"><a href="javascript:void(0)">{{product.productCategory}}</a></div>
-                          </div>
-                          <div class="meta-info-item">
-                            <div class="meta-info-caption">Tags:</div>
-                            <div class="meta-info-text"><a href="javascript:void(0)">Shrimp</a>,<a href="javascript:void(0)">Vegetables</a></div>
-                          </div>
-                        </div>
-                        <div class="product-quanlity">
-                          <form action="#">
-                            <div class="input-group">
-                              <input type="number" min="0"   placeholder="" value="{{product.quantity}}" class="form-control">
-                              <a (click)="increasequantity()" class="quanlity-plus"><i style="font-size: 10px; font-weight: bold; color:black" class="fa fa-plus"></i></a>
-                              <a (click)="decreasequantity()" class="quanlity-minus"><i style="font-size: 10px; font-weight: bold; color:black" class="fa fa-minus"></i></a>
-                            </div>
-                            <div class="add-to-cart">
-                              <a (click)="addToCart(product)" class="swin-btn"> <span>Add To Cart</span></a>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="product-share"><span class="caption">Share</span>
-                          <ul class="socials list-unstyled list-inline">
-                            <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="product-tab-content">
-                        <!-- Nav tabs-->
-                        <ul role="tablist" class="nav nav-tabs">
-                          <!-- <li role="presentation" class="active"><a href="#product-desc-tab" aria-controls="product-desc-tab" role="tab" data-toggle="tab">DESCRIPTIONS</a></li> -->
-                          <!-- <li role="presentation" class="active"><a href="#product-review" aria-controls="product-review" role="tab" data-toggle="tab">REVIEWS</a></li> -->
-                        </ul>
-                        <!-- Tab panes-->
-                        <div class="tab-content">
-                          <!-- <div id="product-desc-tab" role="tabpanel" class="tab-pane active">
-                            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot. </p>
-                            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean.</p>
-                          </div> -->
-                          <div id="product-review" role="tabpanel" class="tab-pane">
-                            <div id="reviews">
-                              <div id="comments">
-                                <h3 class="product-reviews-title">1 review</h3>
-                                <ul class="commentlist list-unstyled">
-                                  <li>
-                                    <div class="comment_container"><img src="http://2.gravatar.com/avatar/59c82b1d2c60537f900fb191b3cb611b?s=60&amp;d=mm&amp;r=g" width="60" height="60" alt="" class="avatar avatar-60wp-user-avatar wp-user-avatar-60 alignnone photo avatar-default">
-                                      <div class="comment-text">
-                                        <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div>
-                                        <p class="meta"><strong itemprop="author">Maria</strong> –
-                                          <time itemprop="datePublished" datetime="2013-06-07T15:56:24+00:00">June 7, 2017</time>:
-                                        </p>
-                                        <div itemprop="description" class="description">
-                                          <p>This product is Awesome!!!</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <div class="comment_container"><img src="assets/assets/images/blog/blog-comment-avatar03.jpg" width="60" height="60" alt="" class="avatar avatar-60wp-user-avatar wp-user-avatar-60 alignnone photo avatar-default">
-                                      <div class="comment-text">
-                                        <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                        <p class="meta"><strong itemprop="author">Kelvin</strong> –
-                                          <time itemprop="datePublished" datetime="2013-06-07T15:56:24+00:00">June 8, 2017</time>:
-                                        </p>
-                                        <div itemprop="description" class="description">
-                                          <p>I recommended it!!!</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <section class="padding-top-120 padding-bottom-100">
-                    <div class="container">
-                      <div class="swin-sc swin-sc-title">
-                        <p class="top-title"><span>New Product</span></p>
-                        <h3 class="title">Related Products</h3>
-                      </div>
-                      <div class="swin-sc swin-sc-product products-02 carousel-02">
-                        <div class="products nav-slider">
-                          <div class="row slick-padding">
-                            
-                            <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let product of relatedP; let  i= index ">
-                              <div class="blog-item item swin-transition" style="height: 400px;" *ngIf="i<3">
-                                <div class="block-img">
-                                  <img style="height: 250px;" [src]="product.imagePath" alt="" class="img img-responsive">
-                                  <div class="block-circle price-wrapper"><span class="price woocommerce-Price-amount amount"><span class="price-symbol">$</span>{{product.unitPrice}}</span></div>
-                                  <div class="group-btn">
-                                    <a  (click)="orderdetails(product.productCode)" class="swin-btn btn-link">
-                                      <i class="icons fa fa-link"></i>
-                                    </a>
-                                    <a (click)="orderdetails(product.productCode)" class="swin-btn btn-add-to-card">
-                                      <i class="fa fa-shopping-basket"></i>
-                                    </a>
-                                </div>
-                                </div>
-                                <div class="block-content">
-                                  <h5 class="title"><a (click)="orderdetails(product.productCode)">{{product.productName}}</a></h5>
-                                  <div class="product-info">
-                                    <ul class="list-inline">
-                                      <li class="author"><span>Category</span><span class="text">{{product.productCategory}}</span></li>
-                                      <li class="rating"><a (click)="orderdetails(product.productCode)"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                           
-                        
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </section>
-              
+                
               </div>
             </div>
           </div>
-         </div>
-       
+          <div class="col-md-6">
+            <div class="product-summary">
+              <div class="product-title">
+                <div class="" style="font-size: 20px; font-weight: bold; color: #004332;">{{product.productName}}</div>
+              </div>
+              <div class="product-price">
+                <div class="price" style="color: black; font-size: 16px;"><span class="currency-symbol" style="color: white;" >ETB </span>{{product.unitPrice}}</div>
+              </div>
+              <div class="product-info">
+                <ul class="list-inline">
+                  <li class="author"><span>Chef</span><span class="text">{{product.productCategory}}</span></li>
+                  <li class="rating"><a href="javascript:void(0)"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a><span>4 Reviews</span></li>
+                </ul>
+              </div>
+              <div class="product-desc">
+                <p>
+                    Karavan Coffee makes its best effort to create a unique place where customers can socialize with each other in a 
+                  comfortable and relaxing environment while enjoying hot and cold drinks as well as uniquely prepared pastry and food choices.  
+              
+                  <!-- {{product.productDescription}} -->
+                </p>
+              </div>
+              <div class="product-meta-info">
+                <div class="meta-info-item">
+                  <div class="meta-info-caption">Category:</div>
+                  <div class="meta-info-text"><a href="javascript:void(0)">{{product.productCategory}}</a></div>
+                </div>
+                <div class="meta-info-item">
+                  <div class="meta-info-caption">Tags:</div>
+                  <div class="meta-info-text"><a href="javascript:void(0)">Shrimp</a>,<a href="javascript:void(0)">Vegetables</a></div>
+                </div>
+              </div>
+         
+              <div  class="row mb-2" >
+                <div class="" style="font-size: 20px; font-weight: bold; color: #004332;">Addons</div>
+                <ng-container class="row" *ngFor="let ing of ingredients" style="padding-bottom: 20px !important;">
+                   <div class="col-md-6">
+                         <input style="border: 1px solid #004332;" type="checkbox"  name="{{ing.ingredientCode}}" value="{{ing.ingredientId}}"> 
+                         <label for="{{ing.ingredientCode}}">{{ing.ingredientName}}</label>
+                   </div>
+                </ng-container>
+               </div>
+               <div class="row product-quanlity mt-3" >
+                <form action="#">
+                  <div class="input-group">
+                    <input type="number" min="0"   placeholder="" value="{{product.quantity}}" class="form-control">
+                    <a (click)="increasequantity()" class="quanlity-plus"><i style="font-size: 10px; font-weight: bold; color:black" class="fa fa-plus"></i></a>
+                    <a (click)="decreasequantity()" class="quanlity-minus"><i style="font-size: 10px; font-weight: bold; color:black" class="fa fa-minus"></i></a>
+                  </div>
+                  <div class="add-to-cart">
+                    <a (click)="addToCart(product)" class="swin-btn"> <span>Add To Cart</span></a>
+                  </div>
+
+                  
+                </form>
+              </div>
+              <div class="product-share"><span class="caption">Share</span>
+                <ul class="socials list-unstyled list-inline">
+                  <li><a href="javascript:void(0)"><i style="color: #004332;" class="fa fa-facebook"></i></a></li>
+                  <li><a href="javascript:void(0)"><i style="color: #004332;" class="fa fa-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)"><i style="color: #004332;" class="fa fa-pinterest"></i></a></li>
+                  <li><a href="javascript:void(0)"><i style="color: #004332;" class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+   <hr>
+        <section>
+          <h4>Review this Product</h4>
+            <form [formGroup]="ratingForm">
+              <div class="form-group">
+                <label>Rating:</label>
+                <div class="star-rating">
+                  <a   (click)="setRating(1)">
+                    <i class="fa fa-star fa-2x"  [class]="getStarColor(1)"></i>
+                  </a>
+                  <a   (click)="setRating(2)">
+                    <i class="fa fa-star fa-2x"  [class]="getStarColor(2)"></i>
+                  </a>
+                  <a   (click)="setRating(3)">
+                    <i class="fa fa-star fa-2x"  [class]="getStarColor(3)"></i>
+                  </a>
+                  <a   (click)="setRating(4)">
+                    <i class="fa fa-star fa-2x"  [class]="getStarColor(4)"></i>
+                  </a>
+                  <a   (click)="setRating(5)">
+                    <i class="fa fa-star fa-2x"  [class]="getStarColor(5)"></i>
+                  </a>
+                </div>
+                <!-- <div class="text-danger" *ngIf="ratingForm.controls['rating'].dirty && ratingForm.hasError('required','rating')"> * Please, add rating to the product!</div> -->
+
+              </div>
+
+              <div class="form-group">
+                <label for="review">Review:</label>
+                <textarea id="review" formControlName="review" class="form-control" ></textarea>
+                <div class="text-danger" *ngIf="ratingForm.controls['review'].dirty && ratingForm.hasError('required','review')"> * Please, add some message about the product!</div>
+              </div>
+              <p  class="text-bold text-danger">{{message}}</p>
+
+              <a type="submit" (click)="onSubmittingRating()" class="swin-btn"> <span>Submit Your Review</span></a>
+            </form>
+        </section>
+     
+        <section class="mt-5">
+          <h5>Top reviews</h5>
+          <div *ngFor="let review of reviews">
+            <div class="mb-3">
+              <img style="border:1px solid black; border-radius: 50%;" src="assets/assets/images/karavan-images/promises/cake2.png" alt="{{ review.author }}" width="50" height="50">
+              <span  class="h4 p-3">{{ review.author }} <span class="text-warning">{{ '★'.repeat(review.rating) }}</span></span>
+              <p class="p-2">{{ review.comment }}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="padding-top-120 padding-bottom-100">
+          <div class="container">
+            <div class="swin-sc swin-sc-title">
+              <p class="top-title"><span>New Product</span></p>
+              <h3 class="title">Related Products</h3>
+            </div>
+            <div class="swin-sc swin-sc-product products-02 carousel-02">
+              <div class="products nav-slider">
+                <div class="row slick-padding">
+                  
+                  <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let product of relatedP; let  i= index ">
+                    <div class="blog-item item swin-transition" style="height: 400px;" *ngIf="data !=product.productId && i<3">
+                      <div class="block-img">
+                        <img style="height: 250px;" [src]="product.imagePath" alt="" class="img img-responsive">
+                        <div class="block-circle price-wrapper"><span class="price woocommerce-Price-amount amount"><span  style="font-size:10px" class="price-symbol">ETB</span>{{product.unitPrice}}</span></div>
+                        <div class="group-btn">
+                          <a  (click)="orderdetails(product.productCode)" class="swin-btn btn-link">
+                            <i class="icons fa fa-link"></i>
+                          </a>
+                          <a (click)="orderdetails(product.productCode)" class="swin-btn btn-add-to-card">
+                            <i class="fa fa-shopping-basket"></i>
+                          </a>
+                      </div>
+                      </div>
+                      <div class="block-content">
+                        <h5 class="title"><a (click)="orderdetails(product.productCode)">{{product.productName}}</a></h5>
+                        <div class="product-info">
+                          <ul class="list-inline">
+                            <li class="author"><span>Category</span><span class="text">{{product.productCategory}}</span></li>
+                            <li class="rating"><a (click)="orderdetails(product.productCode)"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    
     </div>
+</div>
+</div>
       
     
-    <footer>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 footer-center">
-                        <img width="180" src="../../../../assets/assets/images/logos/logo-03.png" alt="" />
-                        <p>
-                            We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                        </p>
-                        <div class="btn-group social-group btn-group-icons">
-                            
-                            <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            </div>
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a href="#">Karavan Dev Team</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    
+    <app-public-footer></app-public-footer>
 
   
     

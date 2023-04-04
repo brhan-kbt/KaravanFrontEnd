@@ -11,6 +11,7 @@
  * Manage the timeline animations
 */
 
+
 "use strict";
 function cssInit(delay, speed) {
     delay += 'ms';

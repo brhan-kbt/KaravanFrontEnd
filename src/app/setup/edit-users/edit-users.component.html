@@ -1,0 +1,93 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Add User</h1>
+       
+    </div>
+    <section class="section" style="margin-bottom:95px;">
+       <div class="row">
+          <div class="col-lg-12">
+             <div class="card">
+                <div class="card-body" >
+                   <h5 class="card-title">New User Form</h5>
+                   <form class="row g-3 " [formGroup]="editUserData" >
+                     <div class="form-group row"  style="padding:30px;">
+                        <div class="col-md-8">
+                           <div class="row" >
+                              <label for="fullName" class="form-label">Full Name</label> 
+                              <input type="text" formControlName="fullName"   [value]="UserFromDatabase?.fullName"  class="form-control" id="fullName">
+                              <div class="text-danger" *ngIf="editUserData.controls['fullName'].dirty && editUserData.hasError('required','fullName')"> * Please, Enter Your First Name!</div>
+                              <div class="text-danger" *ngIf="editUserData.controls['fullName'].dirty && editUserData.hasError('pattern','fullName')"> *No Space Allowed!</div>
+                           </div>
+
+                           <div class="row" style="margin-top:30px;">
+                              <div class="col-md-9">
+                                 <label for="email" class="form-label">Email</label> 
+                                 <input type="email" [value]="UserFromDatabase?.email" formControlName="email" class="form-control" id="emal">
+                                 <div class="text-danger" *ngIf="editUserData.controls['email'].dirty && editUserData.hasError('required', 'email')"> * Please, Enter Email</div>
+                              </div>
+
+                              <div class="col-md-3">
+                                 <label for="branchId" class="form-label">Branch</label>
+                                 <select formControlName="branchId" id="branchId" class="form-select">
+                                    <option value="">Select Branch</option>
+                                    <ng-container *ngFor="let b of branch">
+                                       <option value="{{b.branchId}}">{{b.branchName}}</option>
+                                    </ng-container>
+                                 </select>
+                              </div>
+                             
+                           </div>
+
+                           <div class="row"  style="margin-top:30px;">
+                              <div class="col-md-6">
+                                 <div class="row">
+                                    <label for="phoneNumber" class="form-label">Phone Number</label> 
+                                    <input type="text" [value]="UserFromDatabase?.phoneNumber" formControlName="phoneNumber" class="form-control" id="phoneNumber">
+                                    <div class="text-danger" *ngIf="editUserData.controls['phoneNumber'].dirty && editUserData.hasError('required','phoneNumber')"> * Please Enter a Phone Number.</div>
+                                    <div class="text-danger" *ngIf="editUserData.controls['phoneNumber'].dirty && editUserData.hasError('pattern','phoneNumber')"> * Phone Should be in this format <strong>251905280270</strong> .</div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="row" style="padding-left:30px;">
+                                    <label for="role" class="form-label">Type</label>
+                                    <select formControlName="role" id="role" class="form-select">
+                                       <option [value]="UserFromDatabase?.role" [selected]>{{UserFromDatabase?.role}}</option>
+                                       <option value="Administrator">Administrator</option>
+                                       <option value="Customer">Customer</option>
+                                       <option value="System Admin">System Admin</option>
+                                       <option value="Branch Admin">Branch Admin</option>
+                                     </select>
+                                     <div class="text-danger" *ngIf="editUserData.controls['role'].dirty && editUserData.hasError('required', 'role')"> * Please, Select User Type</div>
+                                    <!-- <div class="text-danger" *ngIf="editUserData.controls['password'].dirty && editUserData.hasError('hasCapitalCase','password')"> *Must contain at least 1 Letter in Capital Case!</div> -->
+                                    <!-- <div class="text-danger" *ngIf="editUserData.controls['password'].dirty && editUserData.hasError('hasSmallCase','password')"> *Must contain at least 1 Letter in Small Case!</div> -->
+                                    <!-- <div class="text-danger" *ngIf="editUserData.controls['password'].dirty && editUserData.hasError('hasSpecialCharacters','password')"> *Must contain at least 1 Special Character in Capital Case!</div> -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                           <img [src]="UserFromDatabase?.imagePath" alt="">
+                           <div class="row">
+                              <label for="imagePath" class="form-label">Choose Another_Image</label>
+                              <input type="file" formControlName="imagePath" name="image" class="form-control" (change)="onFileSelect($event)"id="imagePath">
+                           </div>
+                        </div>
+                       
+                     </div>
+                     
+                     
+                      <div class="text-center"> 
+                        <button type="submit" (click)="onEditingUser()" class="btn btn-primary">Submit</button> 
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                     </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+ </main>
+<app-footer></app-footer>

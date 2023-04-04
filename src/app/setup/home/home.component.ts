@@ -9,11 +9,15 @@ import { GalleryService } from 'src/app/services/gallery/gallery.service';
 })
 export class HomeComponent implements OnInit {
 
-  galleries:Gallery[]=[];
+  galleries:any[]=[];
+
+  ismuted:boolean=true;
   
   constructor( private gallery:GalleryService) {
           gallery.getGalleries().subscribe((res)=>{
           this.galleries=res
+          console.log(this.galleries);
+          
    })
    }  
  
@@ -21,5 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-
+  muteVideo(){
+      this.ismuted = !this.ismuted;
+  }
 }

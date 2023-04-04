@@ -14,36 +14,36 @@
                    <form class="row g-3 " [formGroup]="addGalleryForm">
                      <div class="row form-group">
                         <div class="col-md-6">
-                           <label for="eventTitle" class="form-label">Event Title</label> 
-                           <input type="text" formControlName="eventTitle" class="form-control" id="eventTitle">
-                           <div *ngIf="addGalleryForm.controls['eventTitle'].dirty && addGalleryForm.hasError('required', 'eventTitle')" class="text-danger"> * Please, Enter Unit Price.</div>
+                           <label for="title" class="form-label">Event Title</label> 
+                           <input type="text" formControlName="title" class="form-control" id="title">
+                           <div *ngIf="addGalleryForm.controls['title'].dirty && addGalleryForm.hasError('required', 'title')" class="text-danger"> * Please, Enter Unit Price.</div>
                         </div>
                         
                        
 
                         <div class="col-md-6">
-                           <label for="eventDate" class="form-label">Event Date</label>
-                           <input type="date" formControlName="eventDate" class="form-control">
-                           <div *ngIf="addGalleryForm.controls['eventDate'].dirty && addGalleryForm.hasError('required', 'eventDate')" class="text-danger"> * Please, Select Event Date.</div>
+                           <label for="date" class="form-label">Event Date</label>
+                           <input type="date" formControlName="date" class="form-control">
+                           <div *ngIf="addGalleryForm.controls['date'].dirty && addGalleryForm.hasError('required', 'date')" class="text-danger"> * Please, Select Event Date.</div>
                         </div>
                        
                      </div>
                      <div class="row form-group" >
                         <div class="col-md-6">
-                              <label for="typeofgallery" class="form-label">Select Type</label>
-                              <select formControlName="typeofgallery" class="form-select">
+                              <label for="type" class="form-label">Select Type</label>
+                              <select formControlName="type" class="form-select">
                                  <option selected>Open this select menu</option>
                                  <option value="1">One</option>
                                  <option value="2">Two</option>
                                  <option value="3">Three</option>
                                </select>
-                         <div *ngIf="addGalleryForm.controls['typeofgallery'].dirty && addGalleryForm.hasError('required', 'typeofgallery')" class="text-danger"> * Please, Enter Some Description.</div>
+                         <div *ngIf="addGalleryForm.controls['type'].dirty && addGalleryForm.hasError('required', 'type')" class="text-danger"> * Please, Enter Some Description.</div>
 
                         </div>
                         <div class="col-md-6">
-                           <label for="imagePath" class="form-label">Choose Image</label>
-                           <input type="file" formControlName="imagePath" class="form-control" id="imagePath">
-                         <div *ngIf="addGalleryForm.controls['imagePath'].dirty && addGalleryForm.hasError('required', 'imagePath')" class="text-danger"> * Please, Enter Some Description.</div>
+                           <label for="image" class="form-label">Choose Image</label>
+                           <input type="file" formControlName="image" class="form-control" (change)="onFileSelect($event)" id="image">
+                         <div *ngIf="addGalleryForm.controls['image'].dirty && addGalleryForm.hasError('required', 'image')" class="text-danger"> * Please, Enter Some Description.</div>
 
                         </div>
                      </div>

@@ -1,0 +1,500 @@
+<!-- <app-navbar></app-navbar>
+
+
+<section class="customsection">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="customheading" >
+            <div style="margin: 0px auto; text-align: center;">
+                <p class="customheadingP">We believe we are in the business of selling happiness in the form of food and drink. 
+                    We source superior ingredients and craft beautifully layered products with 
+                    the ultimate objective of making our customers happy. 
+                </p>
+            </div>
+               
+                <section class="container images" >
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Cake</h4>
+                    </div>
+                      
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/food2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Food</h4>
+                    </div>
+                       
+                    <div style="margin: auto; text-align: center;">
+                        <img class="customImage" src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                        <h4 style="color: white; font-size:20px; padding-top: 20px; font-weight: 900;">Coffee</h4>
+                    </div>
+
+                </section>
+        </div>
+
+        
+    </div>
+
+ </section>
+ <div class="section-bg-image  text-center white"  style="background-color: white !important;">
+    <div class="container" style="padding: 60px 0px;">
+    
+        <div class="row" style="margin: 0px 0px 50px 0px;">
+            <div class="col-md-6">
+                <img src="assets/assets/images/karavan-images/promises/food2.png" alt="" />
+            </div>
+            <div class="col-md-6 ">
+                <div class="title-base ">
+                    <h2 style="color: #004332 !important;">Karavan Food</h2>
+                    <p style="color: #004332 !important;">Layers of Happiness!</p>
+                </div>
+                
+                <p style="color: #004332 !important;">
+                    Karavan is proud to be able to produce and
+                     offer a very wide range of choices on the menu even 
+                     in the smallest of kitchens. This is due to a unique
+                      system developed by Karavan to split the food preparation 
+                      process and the serving process. Using this modern cleaning,
+                       preparation and portioning method the company 
+                       offers more than 57 food items.
+                </p>
+                <p class="font-2 text-color text-bold text-l">ETB 300.00</p>
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" >Order Now!</a>
+
+            </div>
+
+        </div>
+
+    
+    </div>
+</div>
+      <app-public-footer></app-public-footer> -->
+
+      <app-navbar></app-navbar>
+
+
+<div  class="section-bg-video grunge-border" >
+    <div class="bg-overlay transparent-dark"></div>
+    <div class="videobox" >
+      
+
+        <video src="assets/assets/images/Food Film - Cinematic Burger.mp4" type="video/mp4" playsinline loop autoplay [muted]="ismuted"></video>
+        
+        
+    </div>
+    <div style="" class="container content overlay-content white text-center" data-anima="fade-top" data-timeline="asc" data-time="1000">
+        
+        <h2 class="text-bold text-xl anima" style="font-family:Lithos !important; font-size: 40px !important; font-weight:900;"> KARAVAN FOOD </h2>
+        <p class="anima layersofhappiness" style=" font-family: Reliant_Free !important;
+        font-size: 35px !important;
+        font-weight: bold;"> Layers of Happiness !</p>
+        <!-- <p  class="anima customPadding" style="font-family: Manrope !important;">
+            We believe we are in the business of selling happiness in the form of food and drink. 
+            We source superior ingredients and craft beautifully layered products with 
+            the ultimate objective of making our customers happy. 
+        </p> -->
+        
+        <a  routerLink="/order" class="btn btn-border btn-sm" style="border: 3px solid #D6B13E !important;" >Order Now!</a>
+        
+        <div>
+            <a class="custom-Play" style="margin-top: 10px important;" (click)="muteVideo()">
+                <i *ngIf="ismuted == true" style="font-size:30px"  class="fa fa-microphone-slash" aria-hidden="true"></i>
+                <i *ngIf="ismuted == false" style="font-size:30px"  class="fa fa-microphone"  aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    
+    
+    <div class="overlay-content" style="padding:5px 0px">
+        
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+        </div>
+        <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+        </div>
+    </div>
+</div>   
+
+<div class="section-bg-image  text-center white"  style="background-color: white !important; background: url(assets/assets/images/karavan-images/bg/bg-mc-white.jpg) ; background-size: cover; background-repeat: no-repeat;">
+    <div class="container" style="padding: 60px 0px;">
+
+        <div class="row" style="margin: 0px 0px 50px 0px;">
+            <div class="col-md-6 align-items-center ">
+                <div class="title-base ">
+                    <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Food</h2>
+                    <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
+                </div>
+                <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                    We use superior ingredients on all our cakes, 
+                    which we import ourselves from Europe. KERRY, 
+                    our supplier from the United Kingdom is a leader in 
+                    food and beverage ingredients market. Ask for our 2016 
+                    'Cake for all Occasions' catalogue of our creative designs 
+                    and unique styles for all occasions including wedding, birthday, 
+                    graduation and more.
+                </p>
+                <p class="font-2 text-color text-bold text-l" data-aos="fade-up"   data-aos-duration="2000">ETB 300.00</p>
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" data-aos="fade-up"   data-aos-duration="2000">Order Now!</a>
+            
+            </div>
+            <div class="col-md-6">
+                <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/foods/rbg/f4.png" alt="" />
+
+            </div>
+
+        </div>
+</div>
+</div>
+    
+<div class="section-bg-image  text-center white" style="background-color: white !important; background: url(assets/assets/images/karavan-images/bg/bg2.jpg) ; background-size: cover; background-repeat: no-repeat;">
+    <div style="padding:60px 0px 30px 0px;">
+        <h4 style="color:#004332;font-size:25px;font-weight:bold;font-family: Lithos;" data-aos="fade-up"   data-aos-duration="2000">
+            Karavan's fast food: fast, tasty, and convenient.
+        </h4>
+        <h4 style="color:black;font-size:30px;font-weight:bold;font-family: Reliant_Free;" data-aos="fade-up"   data-aos-duration="2000">
+            Come and satisfy your cravings today!        
+        </h4>
+    </div>
+    
+  
+    <div class="" style="padding: 60px 0px;">
+
+        <div class="row d-md-flex" style="justify-content: center;">
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f1.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>BreakFast</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f5.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Burger</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f6.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Fish</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f3.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Pasta</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f4.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Habesha</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/foods/rbg/f2.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Pizza </h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Sandwith</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <div class="imgBx">
+                    <img src="assets/assets/images/karavan-images/promises/cake2.png" alt="">
+                </div>
+                <div class="contentBx">
+                    <h2>Torta Cake</h2>
+                    <div class="price">
+                        <p style="font-family: Reliant_Free !important;
+        font-size: 20px !important;
+        font-weight: bold;">Layers of Happiness! </p>
+                    </div>
+    
+                    <a href="#">Order Now!</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="section-bg-color" style="background-color: white !important; background: url(assets/assets/images/karavan-images/bg/bg3.jpg) ; background-size: 100%; background-repeat: no-repeat;">
+    <div class="container content">
+        <h2 style="text-align: center;color: #004332 !important; font-weight: bold;" data-aos="fade-up"   data-aos-duration="2000">Know Us Better</h2>
+    <div class="row" data-aos="fade-up"   data-aos-duration="2000">
+       
+        <div class="col-md-3">
+            <div class="icon-box icon-box-top-bottom">
+                <div class="icon-box-cell">
+                    <i class="im-conference text-xl"></i>
+                </div>
+                <div class="icon-box-cell">
+                    <i class="fa fa-coffee  knowusbetter" aria-hidden="true"></i>
+                    <h4 style="font-size:50px;font-weight:bold; color:black;  font-family: Reliant_Free !important;">Tradition</h4>
+                    <p  style="color: black; font-family: Poppins; font-style: italic; padding-top: 10px; font-size: 20px; letter-spacing: 2px; word-spacing: 5px;">Macchiato sold at our Flagship branch since opening. Macchiato sold at our Flagship branch since opening. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="icon-box icon-box-top-bottom">
+                <div class="icon-box-cell">
+                    <i class="im-conference text-xl"></i>
+                </div>
+                <div class="icon-box-cell">
+                    <i class="fa fa-check-square-o  knowusbetter" aria-hidden="true"></i>
+
+                    <h4 style="font-size:50px;font-weight:bold; color:black;  font-family: Reliant_Free !important;">Quality</h4>
+                    <p  style="color: black; font-family: Poppins; font-style: italic; padding-top: 10px; font-size: 20px; letter-spacing: 2px; word-spacing: 5px;">Macchiato sold at our Flagship branch since opening. Macchiato sold at our Flagship branch since opening. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="icon-box icon-box-top-bottom">
+                <div class="icon-box-cell">
+                    <i class="im-conference text-xl"></i>
+                </div>
+                <div class="icon-box-cell">
+                
+                    <i class="fa fa-pencil-square-o  knowusbetter" aria-hidden="true"></i>
+
+                    <h4 style="font-size:50px;font-weight:bold; color:black;  font-family: Reliant_Free !important;">Creativity</h4>
+                    <p  style="color: black; font-family: Poppins; font-style: italic; padding-top: 10px; font-size: 20px; letter-spacing: 2px; word-spacing: 5px;">Macchiato sold at our Flagship branch since opening. Macchiato sold at our Flagship branch since opening. </p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-3">
+            <div class="icon-box icon-box-top-bottom">
+                <div class="icon-box-cell">
+                    <i class="im-conference text-xl"></i>
+                </div>
+                <div class="icon-box-cell">
+                
+                    <i class="fa fa-music  knowusbetter" aria-hidden="true"></i>
+                    <h4 style="font-size:50px;font-weight:bold; color:black;  font-family: Reliant_Free !important;">Passion</h4>
+                    <p  style="color: black; font-family: Poppins; font-style: italic; padding-top: 10px; font-size: 20px; letter-spacing: 2px; word-spacing: 5px;">Macchiato sold at our Flagship branch since opening. Macchiato sold at our Flagship branch since opening. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+   
+    <!-- <div class="container" style="padding: 60px 0px;">
+
+        <div class="row">
+           
+            <div class="cardcus">
+                <div class="cardcus-inner">
+                  <div class="cardcus-front">
+                    <h2>Front of Card</h2>
+                  </div>
+                  <div class="cardcus-back">
+                    <h2>Back of Card</h2>
+                  </div>
+                </div>
+              </div> -->
+              
+           
+              
+<!-- 
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake1.jpg" alt="Image" class="card-img">
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake2.jpg" alt="Image" class="card-img">
+            </div>
+
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake1.jpg" alt="Image" class="card-img">
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake2.jpg" alt="Image" class="card-img">
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake1.jpg" alt="Image" class="card-img">
+            </div>
+            <div class="cakecard" data-aos="fade-up"   data-aos-duration="2000">
+                <img src="assets/assets/images/karavan-images/bg/cake2.jpg" alt="Image" class="card-img">
+            </div> -->
+        <!-- </div>
+
+    </div> -->
+
+<div class="section-bg-image  text-center white"  style="background-color: white !important; background: url(assets/assets/images/karavan-images/bg/bg3.jpg) ; background-size: cover; background-repeat: no-repeat;">
+    <div class="container" style="padding: 60px 0px;">
+
+        <div class="row" style="margin: 0px 0px 50px 0px;">
+            <div class="col-md-6 align-items-center ">
+                <div class="title-base ">
+                    <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Food</h2>
+                    <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
+                </div>
+                <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                    We use superior ingredients on all our cakes, 
+                    which we import ourselves from Europe. KERRY, 
+                    our supplier from the United Kingdom is a leader in 
+                    food and beverage ingredients market. Ask for our 2016 
+                    'Cake for all Occasions' catalogue of our creative designs 
+                    and unique styles for all occasions including wedding, birthday, 
+                    graduation and more.
+                </p>
+                <p class="font-2 text-color text-bold text-l" data-aos="fade-up"   data-aos-duration="2000">ETB 300.00</p>
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" data-aos="fade-up"   data-aos-duration="2000" >Order Now!</a>
+            
+            </div>
+            <div class="col-md-6">
+                <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/foods/rbg/f1.png" alt="" />
+
+            </div>
+
+        </div>
+
+        <div class="row" style="margin: 0px 0px 50px 0px;">
+            <div class="col-md-6">
+               
+                <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/foods/rbg/f2.png" alt="" />
+            
+            </div>
+            <div class="col-md-6  align-items-center ">
+                <div class="title-base ">
+                    <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Food</h2>
+                    <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
+                </div>
+                <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                    We use superior ingredients on all our cakes, 
+                    which we import ourselves from Europe. KERRY, 
+                    our supplier from the United Kingdom is a leader in 
+                    food and beverage ingredients market. Ask for our 2016 
+                    'Cake for all Occasions' catalogue of our creative designs 
+                    and unique styles for all occasions including wedding, birthday, 
+                    graduation and more.
+                </p>
+                <p class="font-2 text-color text-bold text-l" data-aos="fade-up"   data-aos-duration="2000">ETB 300.00</p>
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" data-aos="fade-up"   data-aos-duration="2000">Order Now!</a>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin: 0px 0px 50px 0px;">
+            <div class="col-md-6 align-items-center ">
+                <div class="title-base ">
+                    <h2 style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Karavan Food</h2>
+                    <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">Layers of Happiness!</p>
+                </div>
+                <p style="color: #004332 !important;" data-aos="fade-up"   data-aos-duration="2000">
+                    We use superior ingredients on all our cakes, 
+                    which we import ourselves from Europe. KERRY, 
+                    our supplier from the United Kingdom is a leader in 
+                    food and beverage ingredients market. Ask for our 2016 
+                    'Cake for all Occasions' catalogue of our creative designs 
+                    and unique styles for all occasions including wedding, birthday, 
+                    graduation and more.
+                </p>
+                <p class="font-2 text-color text-bold text-l" data-aos="fade-up"   data-aos-duration="2000">ETB 300.00</p>
+                <a  routerLink="/order" class="btn btn-border btn-sm" style="color: #004332 !important; border: 3px solid #D6B13E !important;" data-aos="fade-up"   data-aos-duration="2000">Order Now!</a>
+            
+            </div>
+            <div class="col-md-6">
+                <img data-aos="fade-up"   data-aos-duration="2000" src="assets/assets/images/karavan-images/foods/rbg/f5.png" alt="" />
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section-bg-image  text-center white"  style="background-color: white !important; ">
+    <div id="customgallery">
+        <ng-container *ngFor="let g of hello | slice: 0: totalNumberOfRecordsToShow ">
+            <a  class="img-box i-bottom-right" data-lightbox="modals" data-title="{{g.eventTitle}}" href="{{g.imagePath}}">
+            <img [src]="g.imagePath" alt="" />
+            </a>
+            <!-- <img  src="{{g.image}}" alt="" /> -->
+        </ng-container>
+        </div>
+        <div  class="loadmorebtn">
+            <a class="hover-underline-animation"   *ngIf="isLoadMoreVisible" (click)="loadMoreButtonClicked()">
+                Load More Photos... 
+            </a>
+        </div>
+</div>
+<app-public-footer></app-public-footer>
+
+    

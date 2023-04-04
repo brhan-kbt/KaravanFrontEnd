@@ -1,28 +1,39 @@
 
 <app-navbar></app-navbar>
 
-
     <div id="pagewrap" class="pagewrap">
         <div id="html-content" class="wrapper-content">
        
-          <div class="page-container">
-            <div data-bottom-top="background-position: 50% 50px;" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -50px;" class="page-title page-product">
-              <div class="container">
-                <div class="title-wrapper">
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(-5px);" data--50-top="transform: translateY(-15px);opacity:0.8;" data--120-top="transform: translateY(-30px);opacity:0;" data-anchor-target=".page-title" class="title" style="font-family: Lithos;">Login To Your Account</div>
-                  <div data-top="opacity:1;" data--120-top="opacity:0;" data-anchor-target=".page-title" class="divider"><span class="line-before"></span><span class="dot"></span><span class="line-after"></span></div>
-                  <div data-top="transform: translateY(0px);opacity:1;" data--20-top="transform: translateY(5px);" data--50-top="transform: translateY(15px);opacity:0.8;" data--120-top="transform: translateY(30px);opacity:0;" data-anchor-target=".page-title" class="subtitle">We hope you will like this product and give us 5 star rating</div>
+         <div class="header-title ken-burn white" style="background-image: url(../../../../assets/assets/images/bg-28.jpg)">
+            <div style="position: absolute; top: 40%; left: 50%; transform:translate(-50%, -50%);">
+                <div class="title-base">
+                    <h1>Login</h1>
+                    <p style="font-family: Reliant_Free !important;
+                    font-size: 35px !important;
+                    font-weight: bold;">Login to Your Karavan Account!</p>
                 </div>
-              </div>
             </div>
-            <div class="page-content-wrapper">
-                <main>
+        </div>
+        <div class="title-base" style="transform: translateY(-100%);">
+                
+        
+         <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+         </div>
+         <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+         </div>
+         <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+         </div>
+         <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 30px; margin-top: 3px;">
+         </div>
+         <div style="background-image: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C); height: 5px; margin-top: 3px;">
+         </div>
+     </div>
+            <!-- <div class="page-content-wrapper">
                     <div class="container">
-                       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-                          <div class="container">
+                       <section class="section register d-flex flex-column align-items-center justify-content-center py-4">
+                          --><div style="transform: translateY(-25%)" class="container"> 
                              <div class="row justify-content-center">
                                 <div class="col-lg-6 col-md-8 d-flex flex-column align-items-center justify-content-center">
-                                   <!-- <div class="d-flex justify-content-center py-4"> <a routerLink="/" class="logo d-flex align-items-center w-auto"> <img src="assets/img/logo.png" alt=""> <span class="d-none d-lg-block">Admin</span> </a></div> -->
                                    <div class="card mb-3">
                                       <div class="card-body">
                                          <div class="pt-4 pb-2">
@@ -31,10 +42,10 @@
                                          </div>
                                          <form class="row g-3" [formGroup]="loginForm">
                                             <div class="col-12">
-                                               <label for="email" class="form-label">Email</label>
-                                               <div class="input-group" [class.error]=" loginForm.controls['email'].dirty && loginForm.hasError('required','email') ">
-                                                   <input type="text" formControlName="email" class="form-control" id="youremail" required>
-                                                  <div class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"> * Please Enter Your Email.</div>
+                                               <label for="phoneOrEmail" class="form-label">Email</label>
+                                               <div class="input-group" [class.error]=" loginForm.controls['phoneOrEmail'].dirty && loginForm.hasError('required','phoneOrEmail') ">
+                                                   <input type="text" formControlName="phoneOrEmail" class="form-control" id="yourphoneOrEmail" required>
+                                                  <div class="text-danger" *ngIf="loginForm.controls['phoneOrEmail'].dirty && loginForm.hasError('required','phoneOrEmail')"> * Please Enter Your Email.</div>
                                                </div>
                                             </div>
                                             <div class="col-12">
@@ -46,8 +57,6 @@
                                             </div>
                                             <div class="col-12">
                                                <div class="form-check"> 
-                                                <!-- <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">  -->
-                                                <!-- <label class="form-check-label" for="rememberMe">Remember me</label> -->
                                             </div>
                                             </div>
                                             <div class="col-12"> 
@@ -62,45 +71,12 @@
                                 </div>
                              </div>
                           </div>
-                       </section>
-                    </div>
-                 </main>
-            </div>
-          </div>
-       </div>
-     
-    </div>
+                 </div>
+    <!-- </div> -->
     
     
-    <footer>
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 footer-center">
-                        <img width="180" src="../../../../assets/assets/images/logos/logo-03.png" alt="" />
-                        <p>
-                            We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
-                        </p>
-                        <div class="btn-group social-group btn-group-icons">
-                            
-                            <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            </div>
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2022 Karavan - info@karavan.com - +251-911-111-111 - Bethlehem Plazza, Megenagna - Designed by: <a href="#">Karavan Dev Team</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+    <app-public-footer></app-public-footer>
+
     
 
 

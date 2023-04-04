@@ -1,0 +1,15 @@
+.load{
+    margin-top: 20px;
+    border: 1px solid #D6B13E;
+    border-radius: 20px;
+    font-size: 17px;
+    background-color: #004332;
+    letter-spacing: .3px;
+    padding: 10px 25px 10px 25px;
+    color: #D6B13E;
+}
+.load:hover{
+    border: 1px solid #004332;
+    background-color: white;
+    color: #004332;
+}

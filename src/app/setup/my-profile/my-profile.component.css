@@ -1,0 +1,25 @@
+.userheader{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.userinfo{
+    color: #004332;
+    font-weight: bold;
+}
+.userhr{
+    background: linear-gradient(to right, #F4EE7D, #CA9E2C,#F4EE7D, #CA9E2C);
+    height: 5px;
+    opacity: 1;
+}
+
+.userbtn{
+    color: #D6B13E !important; 
+    border: 1px solid #D6B13E !important;
+    background: #004332 !important;
+}
+
+.userbtn:hover{
+    color: #004332 !important;
+    border: 1px solid #004332 !important;
+}

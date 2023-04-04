@@ -1,8 +1,62 @@
-<header id="custom_header" class="custom-header">
+<!-- <div style="background-color: #D6B13E; height: 20px;" > 
+</div>  
+
+
+<ng-container *ngIf="true" >
+    <div >
+        <div style="position: fixed; z-index: 999; vertical-align: middle; top: 50%; transform: translateY(-50%);">
+            <div>
+                <a  *ngIf="socialFollow==false" (click)="changeVisibility()">
+                    <i  style="color: #D6B13E; font-size: 25px; font-weight: bold;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a  *ngIf="socialFollow==true" (click)="changeVisibility()">
+                    <i  style="color: #D6B13E;  font-size: 25px; font-weight: bold;" class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <ng-container *ngIf="socialFollow" >
+            <div style="position: fixed; z-index: 1; padding: 10px; margin-left: 10px; vertical-align: middle; top: 50%; transform: translateY(-50%);">
+                <div >
+                    <p style="color:#004332;">
+                        Follow Us!
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #324E8C;" class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                        <i id="socialFollow" style="color: #27A6E9;" class="fa fa-telegram" aria-hidden="true"></i>
+    
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #8D32A1;" class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </p>
+    
+                    <p style="font-size: 30px;">
+                        <a href="">
+                             <i id="socialFollow" style="color: #0079B8;" class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </ng-container>   
+    </div>
+</ng-container>
+
+
+<header  style="background-color:#004332; height: 80px; position:unset;" id="custom_header" class="custom-header">
     <div  class="logo">
-      <!-- <h2>Karavan Coffee</h2> -->
       <img src="../../../../assets/assets/images/karavan-images/logo/logo-01.png" alt="">
   </div>
+
+  <div  class="log02">
+    <img src="../../../../assets/assets/images/karavan-images/logo/logo-02.png" alt="">
+</div>
   
     <div class="navigation">
         <input type="checkbox" style="display: none;" id="nav-checkbox">
@@ -16,13 +70,238 @@
             <li><a routerLink="/whykaravan">Karavan Promises</a> </li>
             <li><a routerLink="/gallery" >Gallery</a> </li>
             <li><a routerLink="/about" >About</a> </li>
-            <li><a routerLink="/order" style="padding: 10px;  font-family: Lithos;">Order Now!</a> </li>
-            <li><a routerLink="/register" >Register</a> </li>
             <li><a routerLink="/login" >Login</a> </li>
-            <li><a href="/cart" >
-              <img width="20px" height="20px" src="../../../../assets/assets/css/cart.png" alt=""> 
-              <span style="margin: 0px 10px;" >{{itemInCart}}</span>
+            <li><a routerLink="/order" style="padding: 10px; border: 1px solid #D6B13E;  font-family: Lithos;">Order Now!</a> </li>
+            <li style="padding-left: 10px;"><a href="/cart" >
+              <i class="fa fa-cart-arrow-down" style="font-size: 20px;" aria-hidden="true"></i>
+              <span style="margin: 0px 5px; font-weight: bold; color: #D6B13E; vertical-align:super" >{{itemInCart}}</span>
             </a></li>
         </ul>
     </div>
-</header>
+</header> -->
+<ng-container>
+    <div >
+        <div style="position: fixed; z-index: 999; vertical-align: middle; top: 50%;  right: 0;">
+            <div class="floatParent">
+                <div class="floatMenu menu1">
+                    <a title="See Menu List" routerLink="/menu"> <i  style="font-size: 20px; color: #004332;" class="fa fa-bars" aria-hidden="true"></i></a>
+                </div>
+                <div class="floatMenu menu2">
+                    <li style="padding-left: 10px; list-style-type: none;"><a href="/cart"  title="Go to Cart!">
+                        <i class="fa fa-cart-arrow-down" style="font-size: 20px;  color: #004332;" aria-hidden="true"></i>
+                        <span style="margin: 0px 5px; font-weight: bold; color: red; vertical-align:super" >{{itemInCart}}</span>
+                        </a></li>
+                </div>
+                <div class="floatMenu menu1">
+                    <a title="Order Here!" routerLink="/order"> <i  style="font-size: 10px; color: #004332;" aria-hidden="true">Order Now!</i></a>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- <ng-container *ngIf="socialFollow" >
+            <div style="position: fixed; z-index: 1; padding: 10px; margin-left: 10px; vertical-align: middle; top: 50%; left: 99%; transform: translateY(-50%);">
+                <div >
+                    <p style="color:#004332;">
+                        Follow Us!
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #324E8C;" class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                        <i id="socialFollow" style="color: #27A6E9;" class="fa fa-telegram" aria-hidden="true"></i>
+    
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #8D32A1;" class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </p>
+    
+                    <p style="font-size: 30px;">
+                        <a href="">
+                             <i id="socialFollow" style="color: #0079B8;" class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </ng-container>    -->
+    </div>
+</ng-container>
+<ng-container *ngIf="true" >
+    <div >
+        <div style="position: fixed; z-index: 999; vertical-align: middle; top: 50%; transform: translateY(-50%);">
+            <div>
+                <a  *ngIf="socialFollow==false" (click)="changeVisibility()">
+                    <i  style="color: #D6B13E; font-size: 25px; font-weight: bold;" class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <a  *ngIf="socialFollow==true" (click)="changeVisibility()">
+                    <i  style="color: #D6B13E;  font-size: 25px; font-weight: bold;" class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        
+        <ng-container *ngIf="socialFollow" >
+            <div style="position: fixed; z-index: 1; padding: 10px; margin-left: 10px; vertical-align: middle; top: 50%; transform: translateY(-50%);">
+                <div >
+                    <p style="color:#004332;">
+                        Follow Us!
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #324E8C;" class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                        <i id="socialFollow" style="color: #27A6E9;" class="fa fa-telegram" aria-hidden="true"></i>
+    
+                        </a>
+                    </p>
+                    <p style="font-size: 30px;">
+                        <a href="">
+                            <i id="socialFollow" style="color: #8D32A1;" class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </p>
+    
+                    <p style="font-size: 30px;">
+                        <a href="">
+                             <i id="socialFollow" style="color: #0079B8;" class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </ng-container>   
+    </div>
+</ng-container>
+    <header class="headercustom">
+        <a routerLink="/welcome" class="logocustom">
+            <img src="assets/assets/images/karavan-images/promises/logo5.png" alt="">
+            <!-- <caption>Layer</caption> -->
+            <!-- <p>Layers of happiness!</p> -->
+        </a>
+        <nav class="navbarcustom">
+            <a routerLink="/cake">Cake</a>
+            <a routerLink="/coffee">Coffee</a>
+            <a routerLink="/food">Food</a>
+            <ng-container *ngIf="logged==true">
+                <div class="profile">
+                <div class="profile-image">
+                  <img [src]="imagePath" alt="Profile Image">
+                </div>
+                <div class="profile-dropdown">
+                  <ul>
+                    <li><a routerLink="/my-profile">My Profile</a></li>
+                    <li><a routerLink="/my-dashboard">My Order</a></li>
+                    <li><a (click)="logout()">Logout</a></li>
+                  </ul>
+                </div>
+                </div>
+            </ng-container>
+              
+<!-- 
+            <div *ngIf="logged==true">
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> 
+                       <img [src]="imagePath" alt="Profile" class="rounded-circle">
+                       <span class="d-none d-md-block dropdown-toggle ps-2">{{name}}</span> </a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                       <li class="dropdown-header">
+                          <h6>{{name}}</h6>
+                          <span>Web Designer</span>
+                       </li>
+                       <li>
+                          <hr class="dropdown-divider">
+                       </li>
+                       <li> <a class="dropdown-item d-flex align-items-center" routerLink="/user-profile"> <i class="bi bi-person"></i> <span>My Profile</span> </a></li>
+                       <li>
+                          <hr class="dropdown-divider">
+                       </li>
+                       <li> <a class="dropdown-item d-flex align-items-center" routerLink="/user-profile"> <i class="bi bi-gear"></i> <span>Account Settings</span> </a></li>
+                       <li>
+                          <hr class="dropdown-divider">
+                       </li>
+                       <li> <a class="dropdown-item d-flex align-items-center" routerLink="/pages-faq"> <i class="bi bi-question-circle"></i> <span>Need Help?</span> </a></li>
+                       <li>
+                          <hr class="dropdown-divider">
+                       </li>
+                       <li> <a class="dropdown-item d-flex align-items-center" (click)="logout()"> <i class="bi bi-box-arrow-right"></i> <span>LogOut</span> </a></li>
+                    </ul>
+                 </li>
+            </div> -->
+
+            <div  *ngIf="open ==false" (click)="menu()" style="color: #D6B13E;" class="fa fa-bars" id="cart-btn"></div>
+            <div *ngIf="open==true" (click)="close()" style="color: #D6B13E;" class="fa fa-close" id="cart-btn"></div>
+
+
+        </nav>
+    
+
+        <div class="icons">
+            <!-- <div class="fas fa-search" id="search-btn"></div> -->
+            <!-- <div class="fas fa-shopping-cart" id="cart-btn"></div> -->
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="text" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+        
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <a routerLink="/welcome" class="logocustom">
+                    <img src="assets/assets/images/karavan-images/promises/logo5.png" alt="">
+                    <!-- <caption>Layer</caption> -->
+                    <!-- <p>Layers of happiness!</p> -->
+                </a> 
+            </div>
+            <div class="cart-item">
+                <a routerLink="/menu">Menu</a> 
+            </div>
+            <div class="cart-item">
+                <a routerLink="/whykaravan">Karavan Promises</a> 
+            </div>
+            <div class="cart-item">
+                <a routerLink="/gallery" >Gallery</a> 
+            </div>
+            <div class="cart-item">
+                <a routerLink="/about" >About</a> 
+            </div>
+            
+            <div *ngIf="logged ==false" class="cart-item">
+                <a routerLink="/login" >Login</a>
+            </div>
+            <div *ngIf="logged ==true" class="cart-item">
+                <a (click)="logout()">Logout</a>
+            </div>
+            <div class="cart-item"> 
+                <a routerLink="/order" style="padding: 10px; border: 1px solid #D6B13E;  font-family: Lithos;">Order Now!</a> 
+            </div>
+            <div class="cart-item">
+                <li style="padding-left: 10px; list-style-type: none;"><a href="/cart" >
+                <i class="fa fa-cart-arrow-down" style="font-size: 20px;" aria-hidden="true"></i>
+                <span style="margin: 0px 5px; font-weight: bold; color: #D6B13E; vertical-align:super" >{{itemInCart}}</span>
+                </a></li>
+            </div>
+        </div>
+
+            <!-- <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="image.jpg" alt="">
+                <div class="content">
+                    <h3>Cart Item 01</h3>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Checkout!</a>
+        </div> -->
+        
+    </header>
+
+    
